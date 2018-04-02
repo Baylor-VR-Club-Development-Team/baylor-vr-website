@@ -1,0 +1,38 @@
+body {
+  overflow-x: hidden;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+.logo {
+  margin-top: -20px;
+}
+.bg-vr {
+  /* background-color: #024833; */
+  background-color: #474747;
+  color: yellow !important;
+  opacity: 0.9;
+}
+.homeImg {
+  /* position: absolute; */
+  z-index: -999;
+  width: 100%;
+  -webkit-filter: blur(2px);filter: blur(2px);
+}
+.homeTxt {
+  margin-top: 65px;
+}
+.weAre {
+  color: #e5e5e5;
+  font-size: 35px;
+  font-weight: 600;
+  background-color: rgba(0,0,0,0.7);
+
+}
+.logoName {
+  font-size: 35px;
+  font-weight:800;
+}
+
+.nav-item a {
+  color: #FFF23A !important;
+}
