@@ -6,14 +6,7 @@ body {
 .logo {
   margin-top: -20px;
 }
-.bg-vr {
-  /* background-color: #024833; */
-  background-color: #474747;
-  color: yellow !important;
-  opacity: 0.9;
-}
 .homeImg {
-  /* position: absolute; */
   z-index: -999;
   width: 100%;
   -webkit-filter: blur(2px);filter: blur(2px);
@@ -21,18 +14,49 @@ body {
 .homeTxt {
   margin-top: 65px;
 }
+.homePG {
+  height: 700px;
+  overflow: hidden;
+  margin-bottom: -65px;
+}
 .weAre {
   color: #e5e5e5;
-  font-size: 35px;
+  font-size: 38px;
   font-weight: 600;
   background-color: rgba(0,0,0,0.7);
-
+  padding: 0px 20px 0px 20px;
 }
 .logoName {
   font-size: 35px;
   font-weight:800;
 }
+.bottom-left {
+    position: absolute;
+    bottom: 175px;
+    left: 250px;
+}
 
-.nav-item a {
-  color: #FFF23A !important;
+/* Navbar styles */
+.navbar-dark {
+  background-color: #474747;
+  opacity: 0.9;
+  padding: 0;
+}
+.navbar-dark .navbar-nav .nav-item {
+  color: #fff;
+}
+.navbar-dark .navbar-nav .active {
+  background-color: #515151;
+}
+.navbar-dark .navbar-nav .nav-link {
+  color: #fff;
+  padding: 20px 15px 20px 15px;
+}
+
+.sponsors {
+  width: 100px;
+  height: auto;
+  -webkit-filter: grayscale(100%); filter: gray;
+  margin-top: 25px;
+  margin-bottom: -25px;
 }
