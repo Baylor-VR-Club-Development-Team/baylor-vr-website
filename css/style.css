@@ -2,6 +2,8 @@ body {
   overflow-x: hidden;
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
+  background-color: #202225;
+  color: white;
 }
 .logo {
   margin-top: -20px;
@@ -10,9 +12,6 @@ body {
   z-index: -999;
   width: 100%;
   -webkit-filter: blur(2px);filter: blur(2px);
-}
-.homeTxt {
-  margin-top: 65px;
 }
 .homePG {
   height: 700px;
@@ -26,14 +25,17 @@ body {
   background-color: rgba(0,0,0,0.7);
   padding: 0px 20px 0px 20px;
 }
+.bottom-left {
+    position: absolute;
+    bottom: 100px;
+    left: 250px;
+}
+#rotate {
+  display: inline;
+}
 .logoName {
   font-size: 35px;
   font-weight:800;
-}
-.bottom-left {
-    position: absolute;
-    bottom: 175px;
-    left: 250px;
 }
 
 /* Navbar styles */
@@ -53,10 +55,47 @@ body {
   padding: 20px 15px 20px 15px;
 }
 
-.sponsors {
-  width: 100px;
-  height: auto;
-  -webkit-filter: grayscale(100%); filter: gray;
+/* Section */
+.lightSection {
+  background-color: #484B51;
+}
+.section1 {
+  margin-top: 65px;
+  border-top: 1px solid black;
+  padding: 15px;
+}
+.sectionTitle {
+  font-size: 35px;
+}
+.sectionTitleDiv {
+  display: inline;
+  margin-left: 10px;
+  border-right: 1px solid white;
+}
+.person {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+}
+.rowSpacer {
   margin-top: 25px;
-  margin-bottom: -25px;
+}
+.center { /* IMG Center */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* About */
+.aboutP {
+  font-size: 15px;
+}
+.card {
+  background-color: #202225;
+  padding-top: 10px;
+}
+
+/* Events */
+.section2 {
+  margin-top: 15px;
 }

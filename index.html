@@ -25,66 +25,108 @@
         <div class="collapse navbar-collapse" id="navbar">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-                <a class="nav-link active" href="">HOME</a>
+                <a class="nav-link" href="#">ABOUT</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="">ABOUT</a>
+                <a class="nav-link" href="#">EVENTS</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="">EVENTS</a>
+                <a class="nav-link" href="#">OFFICERS</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="">DEVELOPMENT</a>
+                <a class="nav-link" href="#">DEVELOPMENT</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="">SPONSORS</a>
+                <a class="nav-link" href="#">eSPORTS</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">STREAMING</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">SPONSORS</a>
             </li>
         </ul>
         </div>
       </nav>
     </div>
 
-    <div class="row">
-      <div class="col-md-12 container homePG">
-        <img class="homeImg img-fluid" src="assets/testheader.jpg">
-        <div class="row homeTxt">
-          <div class="bottom-left">
-            <p class="weAre">We are VR</p>
-
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="jumbotron jumbotron-fluid">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-2">
-            <img class="sponsors" src="assets/vive.png">
-          </div>
-          <div class="col-md-2">
-            <img class="sponsors" src="assets/vive.png">
-          </div>
-          <div class="col-md-2">
-            <img class="sponsors" src="assets/vive.png">
-          </div>
-          <div class="col-md-2">
-            <img class="sponsors" src="assets/vive.png">
-          </div>
-          <div class="col-md-2">
-            <img class="sponsors" src="assets/vive.png">
-          </div>
-          <div class="col-md-2">
-            <img class="sponsors" src="assets/vive.png">
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="container-fluid">
+      <!-- Home Section -->
       <div class="row">
-        <h2></h2>
+        <div class="col-md-12 homePG">
+          <img class="homeImg" src="assets/testheader.jpg">
+          <div class="row">
+            <div class="bottom-left">
+              <div class="weAre">We are <div id="rotate">VR</div></div>
+            </div>
+          </div>
+        </div>
       </div>
+      <!-- End Home Section -->
+
+      <div class="container-fluid">
+        <!-- About Section -->
+        <div class="lightSection section1">
+          <div class="row">
+            <div class="col-md-2 col-sm-12">
+              <div class="sectionTitle">
+                <!-- Title -->
+                ABOUT<div class="sectionTitleDiv"></div>
+              </div>
+            </div>
+            <div class="col-md-9">
+              <!-- Description -->
+              <div class="aboutP">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis eros molestie, aliquam justo vel, suscipit eros. Aliquam risus nisl, faucibus eu aliquam sed, condimentum a eros. Curabitur pretium arcu id odio fringilla aliquet. Phasellus rutrum feugiat elit, sed blandit purus scelerisque nec. Fusce dignissim in ipsum ut suscipit. Maecenas laoreet tellus sed tellus auctor commodo ut sit amet justo. Sed vel ex nec mauris aliquam dapibus. Nam consequat, nulla a mattis tempus, ex elit finibus enim, sed lobortis dolor tellus sit amet mi. Donec eros tortor, pulvinar ac aliquam sit amet, convallis et massa. In hac habitasse platea dictumst.</div>
+            </div>
+          </div>
+
+          <!-- President and Vice President Cards -->
+          <div class="row justify-content-md-center rowSpacer">
+            <div class="col-md-4">
+              <div class="card">
+                <div class="">
+                  <img class="card-img-top person center" src="assets/james.jpg" alt="Card image cap">
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">James Cotter</h5>
+                  <p class="card-text">Founder and standing President of the Baylor VR Club</p>
+                  <a href="#" class="btn btn-primary">LinkedIn</a>
+                </div>
+              </div>
+            </div>
+            <!-- VP -->
+            <div class="col-md-4">
+              <div class="card">
+                <div class="">
+                  <img class="card-img-top person center" src="assets/jake.jpg" alt="Card image cap">
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Jake Rutkowski</h5>
+                  <p class="card-text">Co-Founder and standing Vice President of the Baylor VR Club</p>
+                  <a href="#" class="btn btn-primary">LinkedIn</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End About Section -->
+        <!-- Events Section -->
+        <div class="section2">
+          <div class="row">
+            <div class="col-md-2 col-sm-12">
+              <div class="sectionTitle">
+                <!-- Title -->
+                EVENTS<div class="sectionTitleDiv"></div>
+              </div>
+            </div>
+            <div class="col-md-9">
+              <!-- Description -->
+              </div>
+          </div>
+        </div>
     </div>
+
+
+
     <div style="margin-top: 10000px;"></div>
 
     <!-- Optional JavaScript -->
@@ -92,6 +134,8 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src="js/site.js">
+    <script src="js/site.js"></script>
+
+    </script>
   </body>
 </html>
