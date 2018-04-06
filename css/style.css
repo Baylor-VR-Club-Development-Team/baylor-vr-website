@@ -58,11 +58,16 @@ body {
 /* Section */
 .lightSection {
   background-color: #484B51;
+  border-top: 1px solid white;
+  padding: 15px;
+}
+.darkSection {
+  background-color: #202225;
+  border-top: 1px solid white;
+  padding: 15px;
 }
 .section1 {
   margin-top: 65px;
-  border-top: 1px solid black;
-  padding: 15px;
 }
 .sectionTitle {
   font-size: 35px;
@@ -85,17 +90,40 @@ body {
     margin-left: auto;
     margin-right: auto;
 }
+.card-dark {
+  background-color: #202225;
+  padding-top: 10px;
+  border-color: #024833;
+}
+.card-light {
+  background-color: #484B51;
+  padding-top: 10px;
+  border-color: #024833;
+}
 
 /* About */
 .aboutP {
   font-size: 15px;
 }
-.card {
-  background-color: #202225;
-  padding-top: 10px;
-}
 
 /* Events */
-.section2 {
+/* .section2 {
   margin-top: 15px;
+} */
+.recentEvent {
+  max-width: 100%;
 }
+.ml-5 {
+  margin-left: 90% !important;
+}
+.ml-4 {
+  margin-left: 70% !important;
+}
+.card-date {
+  padding: 5px 10px 0px 10px;
+  background-color: #024833;
+  color: #FFEE37;
+}
+
+/* #024833 - Green */
+/* #FFEE37 - Yellow */
