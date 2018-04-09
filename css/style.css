@@ -125,5 +125,52 @@ body {
   color: #FFEE37;
 }
 
+/* Officers */
+.cardOfficer {
+  margin-top: 10px;
+  border-color: #024833;
+}
+.cardOfficer img {
+  width: 100%;
+
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color:  rgba(2,72,51,0.8);
+}
+
+.cardOfficer:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  width: 100%;
+  color: #FFEE37;
+  font-size: 20px;
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+.OffBtn {
+  color: #FFEE37;
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+
 /* #024833 - Green */
 /* #FFEE37 - Yellow */
