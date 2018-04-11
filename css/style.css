@@ -85,6 +85,15 @@ body {
 .rowSpacer {
   margin-top: 25px;
 }
+.rowSpacer2x{
+  margin-top: 50px;
+}
+.rowSpacer3x{
+  margin-top: 75px;
+}
+.rowSpacer4x{
+  margin-top: 100px;
+}
 .center { /* IMG Center */
     display: block;
     margin-left: auto;
@@ -92,13 +101,14 @@ body {
 }
 .card-dark {
   background-color: #202225;
-  padding-top: 10px;
   border-color: #024833;
 }
 .card-light {
   background-color: #484B51;
-  padding-top: 10px;
   border-color: #024833;
+}
+.card-pad {
+  padding-top: 10px;
 }
 
 /* About */
@@ -170,6 +180,17 @@ body {
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
 }
+
+/* Development */
+.devTitle {
+  font-size: 28px;
+  text-align: center;
+}
+.devTitle hr {
+  border-color: white;
+  width: 75%;
+}
+  /* Carousel Scaling */
 
 
 /* #024833 - Green */
