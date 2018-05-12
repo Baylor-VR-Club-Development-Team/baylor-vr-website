@@ -1,197 +1,434 @@
 body {
-  overflow-x: hidden;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 400;
-  background-color: #202225;
-  color: white;
+    overflow-x: hidden;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    background-color: #202225;
+    color: white;
 }
+
 .logo {
-  margin-top: -20px;
+    margin-top: -20px;
 }
+
 .homeImg {
-  z-index: -999;
-  width: 100%;
-  -webkit-filter: blur(2px);filter: blur(2px);
+    z-index: -999;
+    width: 100%;
+    -webkit-filter: blur(2px);
+    filter: blur(2px);
 }
+
 .homePG {
-  height: 700px;
-  overflow: hidden;
-  margin-bottom: -65px;
+    height: 700px;
+    overflow: hidden;
+    margin-bottom: -65px;
 }
+
 .weAre {
-  color: #e5e5e5;
-  font-size: 38px;
-  font-weight: 600;
-  background-color: rgba(0,0,0,0.7);
-  padding: 0px 20px 0px 20px;
+    color: #e5e5e5;
+    font-size: 38px;
+    font-weight: 600;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 0px 20px 0px 20px;
 }
+
 .bottom-left {
     position: absolute;
     bottom: 100px;
     left: 250px;
 }
+
 #rotate {
-  display: inline;
+    display: inline;
 }
+
 .logoName {
-  font-size: 35px;
-  font-weight:800;
+    font-size: 35px;
+    font-weight: 800;
 }
 
 /* Navbar styles */
+
 .navbar-dark {
-  background-color: #474747;
-  opacity: 0.9;
-  padding: 0;
+    background-color: #474747;
+    opacity: 0.9;
+    padding: 0;
 }
+
 .navbar-dark .navbar-nav .nav-item {
-  color: #fff;
+    color: #fff;
 }
+
 .navbar-dark .navbar-nav .active {
-  background-color: #515151;
+    background-color: #515151;
 }
+
 .navbar-dark .navbar-nav .nav-link {
-  color: #fff;
-  padding: 20px 15px 20px 15px;
+    color: #fff;
+    padding: 20px 15px 20px 15px;
 }
 
 /* Section */
+
+.container-75 {
+    max-width: 75% !important;
+}
+
 .lightSection {
-  background-color: #484B51;
-  border-top: 1px solid white;
-  padding: 15px;
+    background-color: #484B51;
+    border-top: 1px solid white;
+    padding: 15px;
 }
+
 .darkSection {
-  background-color: #202225;
-  border-top: 1px solid white;
-  padding: 15px;
+    background-color: #202225;
+    border-top: 1px solid white;
+    padding: 15px;
 }
+
 .section1 {
-  margin-top: 65px;
+    margin-top: 65px;
 }
+
 .sectionTitle {
-  font-size: 35px;
+    font-size: 35px;
 }
+
 .sectionTitleDiv {
-  display: inline;
-  margin-left: 10px;
-  border-right: 1px solid white;
+    display: inline;
+    margin-left: 10px;
+    border-right: 1px solid white;
 }
+
 .person {
-  border-radius: 50%;
-  width: 150px;
-  height: 150px;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
 }
+
 .rowSpacer {
-  margin-top: 25px;
+    margin-top: 25px;
 }
-.rowSpacer2x{
-  margin-top: 50px;
+
+.rowSpacer2x {
+    margin-top: 50px;
 }
-.rowSpacer3x{
-  margin-top: 75px;
+
+.rowSpacer3x {
+    margin-top: 75px;
 }
-.rowSpacer4x{
-  margin-top: 100px;
+
+.rowSpacer4x {
+    margin-top: 100px;
 }
-.center { /* IMG Center */
+
+.center {
+    /* IMG Center */
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
+
 .card-dark {
-  background-color: #202225;
-  border-color: #024833;
+    background-color: #202225;
+    border-color: #024833;
 }
+
 .card-light {
-  background-color: #484B51;
-  border-color: #024833;
+    background-color: #484B51;
+    border-color: #024833;
 }
+
 .card-pad {
-  padding-top: 10px;
+    padding-top: 10px;
 }
 
 /* About */
+
 .aboutP {
-  font-size: 15px;
+    font-size: 15px;
 }
 
 /* Events */
-/* .section2 {
-  margin-top: 15px;
-} */
+
 .recentEvent {
-  max-width: 100%;
+    max-width: 100%;
 }
+
 .ml-5 {
-  margin-left: 90% !important;
+    margin-left: 90% !important;
 }
+
 .ml-4 {
-  margin-left: 70% !important;
+    margin-left: 70% !important;
 }
+
 .card-date {
-  padding: 5px 10px 0px 10px;
-  background-color: #024833;
-  color: #FFEE37;
+    padding: 5px 10px 0px 10px;
+    background-color: #024833;
+    color: #FFEE37;
 }
 
 /* Officers */
+
 .cardOfficer {
-  margin-top: 10px;
-  border-color: #024833;
+    margin-top: 10px;
+    border-color: #024833;
+
 }
+
 .cardOfficer img {
-  width: 100%;
-
-}
-.overlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  transition: .5s ease;
-  background-color:  rgba(2,72,51,0.8);
+    width: 100%;
+    overflow: hidden;
 }
 
-.cardOfficer:hover .overlay {
-  opacity: 1;
+.overlayOfficer {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: rgba(2, 72, 51, 0.8);
 }
 
-.text {
-  width: 100%;
-  color: #FFEE37;
-  font-size: 20px;
-  position: absolute;
-  top: 15%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  text-align: center;
+.cardOfficer:hover .overlayOfficer {
+    opacity: 1;
 }
+
+.textOfficer {
+    width: 100%;
+    color: #FFEE37;
+    font-size: 20px;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+
 .OffBtn {
-  color: #FFEE37;
-  position: absolute;
-  top: 75%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
+    color: #FFEE37;
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
 }
 
 /* Development */
-.devTitle {
-  font-size: 28px;
-  text-align: center;
-}
-.devTitle hr {
-  border-color: white;
-  width: 75%;
-}
-  /* Carousel Scaling */
 
+.devTitle {
+    font-size: 28px;
+    text-align: center;
+}
+
+.devTitle hr {
+    border-color: white;
+    width: 75%;
+}
+
+.cardDeveloper {
+    margin-top: 10px;
+    border-color: #024833;
+
+}
+
+.cardDeveloper img {
+    width: 100%;
+    overflow: hidden;
+}
+
+.overlayDev {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.cardDeveloper:hover .overlayDev {
+    opacity: 1;
+}
+
+.textDev {
+    width: 100%;
+    color: #fff;
+    font-size: 20px;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.DevBtn {
+    color: #024833;
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+
+/*eSports*/
+
+/*Streaming*/
+
+.badge-online {
+    padding: 5px;
+    background-color: #FF4136;
+    border-radius: 7px;
+    font-weight: 800;
+}
+
+.badge-offline {
+    padding: 5px;
+    background-color: #AAAAAA;
+    border-radius: 7px;
+    font-weight: 800;
+}
+
+.twitchStatInfo {
+    margin-top: 5px;
+}
+
+.twitchBtn {
+    margin-left: 20px;
+}
+
+.btn-outline-twitch {
+    background-color: rgba(0, 0, 0, 0);
+    border-color: #7D5BBE;
+    color: #7D5BBE;
+}
+
+.btn-outline-twitch:hover {
+    background-color: #7D5BBE;
+    border-color: #7D5BBE;
+    color: white !important;
+}
+
+.btn-outline-twitch:link {
+    text-decoration: none;
+    color: #7D5BBE;
+}
+
+.btn-outline-twitch:visited {
+    text-decoration: none;
+    color: #7D5BBE;
+}
+
+/*Footer*/
+
+.footer h5 {
+    font-weight: 400;
+    text-decoration: underline;
+}
+
+.footer-logo {
+    font-size: 2em;
+    font-weight: 800;
+}
+
+.footer-logo img {
+    width: 125px;
+    height: auto;
+    margin-left: -25px;
+    margin-top: -25px;
+    margin-bottom: 50px;
+}
+
+.footer-nav li a {
+    -webkit-transition: .25s all ease;
+    -moz-transition: .25s all ease;
+    transition: .25s all ease;
+}
+
+.foot-item {
+    color: white;
+}
+
+.foot-item:link {
+    color: white;
+    text-decoration: none;
+}
+
+.foot-item:visited {
+    color: white;
+    text-decoration: none;
+}
+
+.foot-item:hover {
+    font-weight: 800;
+    margin-left: 10px;
+}
+
+.social li a {
+    -webkit-transition: .25s all ease;
+    -moz-transition: .25s all ease;
+    transition: .25s all ease;
+}
+
+.social {
+    padding: 0;
+    margin: 0 auto;
+}
+
+.social li {
+    display: inline;
+}
+
+.footer_contact {
+    margin-right: 8px;
+    color: white;
+    font-size: 25px;
+}
+
+.footer_contact:link {
+    color: white;
+    text-decoration: none;
+}
+
+.footer_contact:visited {
+    color: white;
+    text-decoration: none;
+}
+
+.footer_contact:hover {}
+
+.facebook:hover {
+    color: #4267B2;
+}
+
+.twitter:hover {
+    color: #1DA1F2;
+}
+
+.instagram:hover {
+    color: #FF8C45;
+}
+
+.twitch:hover {
+    color: #7D5BBE;
+}
+
+.mail:hover {
+    color: #024833;
+}
+
+/* Carousel Scaling */
 
 /* #024833 - Green */
+
 /* #FFEE37 - Yellow */

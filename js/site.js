@@ -2,14 +2,31 @@
 var list = ["VR", "a Team", "the future"];
 var index = 0;
 
-setInterval(function(){
-  if(index >= list.length) {
-    index = 0;
-  }
-   $('#rotate').html(list[index]);
-   index++;
+setInterval(function () {
+    if (index >= list.length) {
+        index = 0;
+    }
+    $('#rotate').html(list[index]);
+    index++;
 }, 3000);
 // End Home Scroller
 // Dev Team Card Carousel
 
 // End Dev Team Card carousel
+
+// Twitch Online|Offline Thing
+var online = 'We are currently <span class="badge-online">Online</span>';
+var offline = 'We are currently <span class="badge-offline">Offline</span>';
+
+$(document).ready(function () {
+    var clientID = "9q24z9k6jxx98x57i3avgecilospmu";
+    var url = "https://api.twitch.tv/kraken/streams/baylorvrclub?client_id=9q24z9k6jxx98x57i3avgecilospmu";
+    $.getJSON(url, function (data) {
+        console.log(data);
+        if (data.stream == null) {
+            $("#TwitchStatus").html(offline);
+        } else {
+            $("#TwitchStatus").html(online);
+        }
+    });
+});
