@@ -7,7 +7,8 @@ body {
 }
 
 .logo {
-    margin-top: -20px;
+    margin-top: -3px;
+    margin-left: 4px;
 }
 
 .homeImg {
@@ -329,6 +330,35 @@ body {
     color: #7D5BBE;
 }
 
+/*Partners*/
+
+.partnerCom .thanks {
+    padding: 5px;
+    font-size: 1.1em;
+    border: 3px solid white;
+    border-radius: 5px;
+}
+
+.partnerDev ul {
+    padding: 5px;
+    font-size: 1.1em;
+    border: 3px solid white;
+    border-radius: 5px;
+}
+
+.partnerGame {
+    padding: 5px;
+    font-size: 1.1em;
+    border: 3px solid white;
+    border-radius: 5px;
+}
+
+.partnerGameImg {
+    width: 100%;
+}
+
+
+
 /*Footer*/
 
 .footer h5 {
@@ -345,7 +375,7 @@ body {
     width: 125px;
     height: auto;
     margin-left: -25px;
-    margin-top: -25px;
+    margin-top: -5px;
     margin-bottom: 50px;
 }
 
