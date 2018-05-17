@@ -101,11 +101,18 @@ body {
     border-right: 1px solid white;
 }
 
-.person {
-    border-radius: 50%;
-    max-width: 150px;
-    max-height: 150px;
-    overflow: hidden
+.card-dark {
+    background-color: #202225;
+    border-color: #024833;
+}
+
+.card-light {
+    background-color: #484B51;
+    border-color: #024833;
+}
+
+.card-pad {
+    padding-top: 10px;
 }
 
 .rowSpacer {
@@ -124,28 +131,26 @@ body {
     margin-top: 100px;
 }
 
-.center {
-    /* IMG Center */
+/* About */
+
+.card-img-wrapper {
+    max-width: 150px;
+    max-height: 150px;
+    overflow: hidden;
+    border-radius: 100px;
+}
+
+.person {
+    width: 150px;
+}
+
+.centerIMG {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    width: 50%;
 }
 
-.card-dark {
-    background-color: #202225;
-    border-color: #024833;
-}
-
-.card-light {
-    background-color: #484B51;
-    border-color: #024833;
-}
-
-.card-pad {
-    padding-top: 10px;
-}
-
-/* About */
 
 .aboutP {
     font-size: 15px;
@@ -183,7 +188,6 @@ body {
 
 .cardOfficer img {
     width: 100%;
-
 }
 
 .overlayOfficer {
