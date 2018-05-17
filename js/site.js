@@ -10,6 +10,14 @@ setInterval(function () {
     index++;
 }, 3000);
 // End Home Scroller
+
+//ScrollSpy
+$('body').scrollspy({
+    target: '#navScroll',
+    offset: 100
+})
+// End ScrollSpy
+
 // Dev Team Card Carousel
 
 // End Dev Team Card carousel
@@ -31,12 +39,11 @@ $(document).ready(function () {
     });
 });
 
+// End Twitch Section
 
-// Select all links with hashes
+
+// Smooth Scroll
 $('a[href*="#"]')
-    // Remove links that don't actually link to anything
-    .not('[href="#"]')
-    .not('[href="#0"]')
     .click(function (event) {
         // On-page links
         if (
@@ -56,3 +63,4 @@ $('a[href*="#"]')
             }
         }
     });
+// End Smooth Scroll

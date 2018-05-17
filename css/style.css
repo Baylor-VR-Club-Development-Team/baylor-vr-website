@@ -4,6 +4,7 @@ body {
     font-weight: 400;
     background-color: #202225;
     color: white;
+    position: relative;
 }
 
 .logo {
@@ -102,8 +103,9 @@ body {
 
 .person {
     border-radius: 50%;
-    width: 150px;
-    height: 150px;
+    max-width: 150px;
+    max-height: 150px;
+    overflow: hidden
 }
 
 .rowSpacer {
@@ -174,12 +176,14 @@ body {
 .cardOfficer {
     margin-top: 10px;
     border-color: #024833;
-
+    overflow: hidden;
+    max-width: 400px;
+    max-height: 400px;
 }
 
 .cardOfficer img {
     width: 100%;
-    overflow: hidden;
+
 }
 
 .overlayOfficer {
@@ -339,11 +343,19 @@ body {
     border-radius: 5px;
 }
 
+.partnerComImg {
+    width: 100%;
+}
+
 .partnerDev ul {
     padding: 5px;
     font-size: 1.1em;
     border: 3px solid white;
     border-radius: 5px;
+}
+
+.partnerDev li {
+    margin-bottom: 25px;
 }
 
 .partnerGame {
@@ -367,8 +379,6 @@ body {
     height: 150px;
     width: auto;
 }
-
-
 
 /*Footer*/
 
@@ -467,6 +477,22 @@ body {
 .mail:hover {
     color: #024833;
 }
+
+
+/* Mobile Only Spacing */
+
+@media screen and (max-width: 767px) {
+    .mobile-space {
+        margin-bottom: 25px;
+    }
+    /*
+    .partnerDev {
+        margin-top: 25px;
+    }
+*/
+}
+
+
 
 /* Carousel Scaling */
 
