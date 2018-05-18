@@ -115,6 +115,10 @@ body {
     padding-top: 10px;
 }
 
+.aboutP {
+    font-size: 15px;
+}
+
 .rowSpacer {
     margin-top: 25px;
 }
@@ -151,9 +155,13 @@ body {
     width: 50%;
 }
 
+.aboutTitle {
+    font-size: 25px;
+}
 
-.aboutP {
-    font-size: 15px;
+.aboutSec {
+    font-size: 17px;
+    width: 100%;
 }
 
 /* Events */
@@ -372,7 +380,7 @@ body {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 250px;
+    width: 200px;
     height: auto;
 }
 
