@@ -12,6 +12,12 @@ body {
     margin-left: 4px;
 }
 
+.homeImgWrapper {
+    max-width: auto;
+    max-height: 700px;
+    overflow: hidden;
+}
+
 .homeImg {
     z-index: -999;
     width: 100%;
@@ -36,7 +42,7 @@ body {
 .bottom-left {
     position: absolute;
     bottom: 100px;
-    left: 250px;
+    left: 50px;
 }
 
 #rotate {
@@ -182,6 +188,14 @@ body {
     padding: 5px 10px 0px 10px;
     background-color: #024833;
     color: #FFEE37;
+}
+
+.card-date-upcoming {
+    margin-left: 90%;
+}
+
+.card-date-next {
+    margin-left: 75%;
 }
 
 /* Officers */
@@ -392,6 +406,10 @@ body {
     width: auto;
 }
 
+.partnerGameSpacer {
+    margin-top: 50px;
+}
+
 /*Footer*/
 
 .footer h5 {
@@ -497,6 +515,43 @@ body {
     .mobile-space {
         margin-bottom: 25px;
     }
+
+    .cardOfficer {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .card-date-upcoming {
+        margin-left: 70%;
+    }
+    .card-date-next {
+        margin-left: 70%;
+    }
+
+    .partnerDivider {
+        width: 80%;
+        height: 1px;
+        background-color: white;
+        margin-bottom: 25px;
+        margin-top: 25px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .partnerGameSpacer {
+        margin-top: 0px;
+    }
+
+    .homeImg {
+        height: 700px;
+        width: auto;
+    }
+
+    .bottom-left {
+        width: 100%;
+        left: 0;
+    }
+
     /*
     .partnerDev {
         margin-top: 25px;

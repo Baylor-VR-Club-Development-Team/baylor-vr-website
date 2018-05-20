@@ -57,7 +57,9 @@
     <!-- Home Section -->
     <div class="row" id="home">
         <div class="col-md-12 homePG">
-            <img class="homeImg" src="assets/testheader.jpg">
+            <div class="homeImgWrapper">
+                <img class="homeImg" src="assets/testheader.jpg">
+            </div>
             <div class="row">
                 <div class="bottom-left">
                     <div class="weAre">We are
@@ -164,7 +166,7 @@
             <!-- Most Recent Event -->
             <div class="row justify-content-center">
                 <div class="col-md-9">
-                    <div class="card-date ml-5">
+                    <div class="card-date card-date-upcoming">
                         <!-- Make this responsive later -->
                         SEPT 5
                     </div>
@@ -179,7 +181,7 @@
                                         <h4 class="card-title">Baylor VR Club Hosts ExxonMobil</h4>
                                         <p class="card-text">Baylor VR Club is partnering with SWE and WICS to host ExxonMobil in Rodgers! This event will include a Q&amp;A from an ExxonMobil representative as well as food beforehand. They will also be sharing with us about their Virtual Reality advancements and developments. We are very excited about this opportunity and hope that you will join us!.</p>
                                         <p class="card-text">
-                                            Wednesday, Sep 5, 2018<br> 6:00 PM - 8:00 PM CDT<br> Rodgers 109
+                                            Wednesday, Sep 5, 2018<br> 6:00 PM - 8:00 PM CDT<br> Rogers 109
                                         </p>
                                         <a href="https://orgsync.com/170412/chapter" target="_blank" class="btn btn-primary">Learn More</a>
                                     </div>
@@ -193,7 +195,7 @@
             <div class="row justify-content-center rowSpacer">
                 <!-- Card 1 -->
                 <div class="col-md-4">
-                    <div class="card-date ml-4">
+                    <div class="card-date card-date-next">
                         <!-- Make this responsive later -->
                         SEPT 24
                     </div>
@@ -297,10 +299,13 @@
                 <!-- Officer Card -->
                 <div class="col-lg-3 col-md-3">
                     <div class="card cardOfficer">
-                        <img src="assets/avatar.png">
+                        <img src="assets/Officers/AliB/2.JPG" style="height: 410px; width: 400px;">
                         <div class="overlayOfficer">
                             <div class="textOfficer">
-                                Alexandra Barnett<br> Historian
+                                Alexandra Barnett<br> Social Media Manager
+                            </div>
+                            <div class="OffBtn">
+                                <a href="https://www.linkedin.com/in/alexandra-barnett-24930a163/" target="_blank" class="btn btn-primary" role="button" aria-pressed="true">LinkedIn</a>
                             </div>
                         </div>
                     </div>
@@ -429,7 +434,7 @@
                         <img class="card-img-top" src="http://soundofbrit.fr/wp-content/uploads/2015/02/Vintage-Vinyl-Record-Player-Wallpaper.jpg">
                         <div class="card-body">
                             <h5 class="card-title">Black Music Gospel Project</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <p class="card-text">Alongside Baylor's Black Gospel Music Restoration Project, the development team is working to create a VR experience so that users can appreciate the expansive archive of the most at-risk pieces and ephemera from the Black Gospel Music tradition in the United States between the 1940's through the 1980's.</p>
                             <a href="https://github.com/Baylor-VR-Club-Development-Team/black-gospel-music-vr" target="_blank" class="btn btn-primary">View on Github</a>
                         </div>
                     </div>
@@ -481,7 +486,7 @@
             <div class="row rowSpacer">
                 <div class="col-md-11">
                     Intested in joining our team?
-                    <button type="button" class="btn btn-outline-success">Contact Us</button>
+                    <a href="mailto:baylorvrclub@gmail.com" target="_blank" class="btn btn-outline-success" role="button" aria-pressed="true">Contact Us!</a>
                 </div>
             </div>
         </div>
@@ -713,47 +718,60 @@
 
                 <div class="col-md-8 partnerGame p-4">
                     <div class="row">
-                        <div class="col-md-3 offset-md-0 mobile-space col-sm-6 offset-sm-3">
+                        <div class="col-md-3 offset-md-0 col-sm-6 offset-sm-3">
                             <a href="http://avrlon.com/" target="_blank">
                                 <img class="partnerGameImgWidth" src="assets/CompanyLogos/avrlon.png">
                             </a>
                         </div>
-                        <div class="col-md-3 offset-md-0 mobile-space col-sm-6 offset-sm-3">
+
+                        <div class="partnerDivider"></div>
+                        <div class="col-md-3 offset-md-0 col-sm-6 offset-sm-3">
                             <a href="http://www.dreadhalls.com/" target="_blank">
                                 <img class="partnerGameImgWidth" src="assets/CompanyLogos/dreadhalls.png">
                             </a>
                         </div>
-                        <div class="col-md-3 offset-md-0 mobile-space col-sm-6 offset-sm-3">
+
+                        <div class="partnerDivider"></div>
+                        <div class="col-md-3 offset-md-0 col-sm-6 offset-sm-3">
                             <a href="http://www.ndreams.com/" target="_blank">
                                 <img class="partnerGameImgWidth" src="assets/CompanyLogos/ndreams.png">
                             </a>
                         </div>
-                        <div class="col-md-3 offset-md-0 mobile-space col-sm-6 offset-sm-3">
+
+                        <div class="partnerDivider"></div>
+                        <div class="col-md-3 offset-md-0 col-sm-6 offset-sm-3">
                             <a href="http://nopact.com/" target="_blank">
                                 <img class="partnerGameImgWidth" src="assets/CompanyLogos/nopact.png">
                             </a>
                         </div>
 
                         <!-- New Row -->
-                        <div class="w-100 rowSpacer2x"></div>
+                        <div class="w-100 partnerGameSpacer"></div>
                         <!-- New Row -->
 
-                        <div class="col-md-3 offset-md-0 mobile-space col-sm-6 offset-sm-3">
+                        <div class="partnerDivider"></div>
+                        <div class="col-md-3 offset-md-0 col-sm-6 offset-sm-3">
                             <a href="https://owlchemylabs.com/" target="_blank">
                                 <img class="partnerGameImgWidth" src="assets/CompanyLogos/OwlchemyLabs.png">
                             </a>
                         </div>
-                        <div class="col-md-3 offset-md-0 mobile-space col-sm-6 offset-sm-3">
+
+                        <div class="partnerDivider"></div>
+                        <div class="col-md-3 offset-md-0 col-sm-6 offset-sm-3">
                             <a href="https://www.schellgames.com/" target="_blank">
                                 <img class="partnerGameImgWidth" src="assets/CompanyLogos/SchellGames.png">
                             </a>
                         </div>
-                        <div class="col-md-3 offset-md-0 mobile-space col-sm-6 offset-sm-3">
+
+                        <div class="partnerDivider"></div>
+                        <div class="col-md-3 offset-md-0 col-sm-6 offset-sm-3">
                             <a href="http://ultimerse.com/" target="_blank">
                                 <img class="partnerGameImgWidth" src="assets/CompanyLogos/ultimerse.png">
                             </a>
                         </div>
-                        <div class="col-md-3 offset-md-0 mobile-space col-sm-6 offset-sm-3">
+
+                        <div class="partnerDivider"></div>
+                        <div class="col-md-3 offset-md-0 col-sm-6 offset-sm-3">
                             <a href="http://vertigo-games.com/" target="_blank">
                                 <img class="partnerGameImgWidth" src="assets/CompanyLogos/vertigogames.png">
                             </a>
@@ -761,25 +779,32 @@
 
 
                         <!-- New Row -->
-                        <div class="w-100 rowSpacer2x"></div>
+                        <div class="w-100 partnerGameSpacer"></div>
                         <!-- New Row -->
 
-                        <div class="col-md-3 offset-md-0 mobile-space col-sm-6 offset-sm-3">
+                        <div class="partnerDivider"></div>
+                        <div class="col-md-3 offset-md-0 col-sm-6 offset-sm-3">
                             <a href="https://www.earthfall.com/" target="_blank">
                                 <img class="partnerGameImgHeight" src="assets/CompanyLogos/holospark.jpg">
                             </a>
                         </div>
-                        <div class="col-md-3 offset-md-0 mobile-space col-sm-6 offset-sm-3">
+
+                        <div class="partnerDivider"></div>
+                        <div class="col-md-3 offset-md-0 col-sm-6 offset-sm-3">
                             <a href="http://www.tothetopvr.com/" target="_blank">
                                 <img class="partnerGameImgHeight" src="assets/CompanyLogos/tothetop.png">
                             </a>
                         </div>
-                        <div class="col-md-3 offset-md-0 mobile-space col-sm-6 offset-sm-3">
+
+                        <div class="partnerDivider"></div>
+                        <div class="col-md-3 offset-md-0 col-sm-6 offset-sm-3">
                             <a href="http://www.mixedrealms.com/" target="_blank">
                                 <img class="partnerGameImgHeight" src="assets/CompanyLogos/mixedrealms.png">
                             </a>
                         </div>
-                        <div class="col-md-3 offset-md-0 mobile-space col-sm-6 offset-sm-3">
+
+                        <div class="partnerDivider"></div>
+                        <div class="col-md-3 offset-md-0 col-sm-6 offset-sm-3">
                             <a href="http://aestheticinteractive.com" target="_blank">
                                 <img class="partnerGameImgHeight" src="assets/CompanyLogos/aestheticinteractive.png">
                             </a>
@@ -787,25 +812,32 @@
 
 
                         <!-- New Row -->
-                        <div class="w-100 rowSpacer2x"></div>
+                        <div class="w-100 partnerGameSpacer"></div>
                         <!-- New Row -->
 
-                        <div class="col-md-3 offset-md-0 mobile-space col-sm-6 offset-sm-3">
+                        <div class="partnerDivider"></div>
+                        <div class="col-md-3 offset-md-0 col-sm-6 offset-sm-3">
                             <a href="http://acceleroto.com/" target="_blank">
                                <img class="partnerGameImgHeight" src="assets/CompanyLogos/acceleroto.png">
                            </a>
                         </div>
-                        <div class="col-md-3 offset-md-0 mobile-space col-sm-6 offset-sm-3">
+
+                        <div class="partnerDivider"></div>
+                        <div class="col-md-3 offset-md-0 col-sm-6 offset-sm-3">
                             <a href="http://gametroopers.net/" target="_blank">
                                 <img class="partnerGameImgWidth" src="assets/CompanyLogos/gametroopers.png">
                             </a>
                         </div>
-                        <div class="col-md-3 offset-md-0 mobile-space col-sm-6 offset-sm-3">
+
+                        <div class="partnerDivider"></div>
+                        <div class="col-md-3 offset-md-0 col-sm-6 offset-sm-3">
                             <a href="https://ladrik.itch.io/undead-development" target="_blank">
                                 <img class="partnerGameImgWidth" src="assets/CompanyLogos/UndeadDevelopment.png">
                             </a>
                         </div>
-                        <div class="col-md-3 offset-md-0 mobile-space col-sm-6 offset-sm-3">
+
+                        <div class="partnerDivider"></div>
+                        <div class="col-md-3 offset-md-0 col-sm-6 offset-sm-3">
                             <a href="https://www.vrnerds.de/" target="_blank">
                                 <img class="partnerGameImgHeight" src="assets/CompanyLogos/vrnerds.png">
                             </a>
@@ -813,25 +845,32 @@
 
 
                         <!-- New Row -->
-                        <div class="w-100 rowSpacer2x"></div>
+                        <div class="w-100 partnerGameSpacer"></div>
                         <!-- New Row -->
 
-                        <div class="col-md-3 offset-md-0 mobile-space col-sm-6 offset-sm-3">
+                        <div class="partnerDivider"></div>
+                        <div class="col-md-3 offset-md-0 col-sm-6 offset-sm-3">
                             <a href="https://developer.vive.com/us/vive-studios/" target="_blank">
                                <img class="partnerGameImgHeight" src="assets/CompanyLogos/fantahornstudio.png">
                            </a>
                         </div>
-                        <div class="col-md-3 offset-md-0 mobile-space col-sm-6 offset-sm-3">
+
+                        <div class="partnerDivider"></div>
+                        <div class="col-md-3 offset-md-0 col-sm-6 offset-sm-3">
                             <a href="https://www.ovrshot.com/" target="_blank">
                                 <img class="partnerGameImgHeight" src="assets/CompanyLogos/windowlickergames.png">
                             </a>
                         </div>
-                        <div class="col-md-3 offset-md-0 mobile-space col-sm-6 offset-sm-3">
+
+                        <div class="partnerDivider"></div>
+                        <div class="col-md-3 offset-md-0 col-sm-6 offset-sm-3">
                             <a href="http://www.whitelotusinteractive.com/" target="_blank">
                                 <img class="partnerGameImgHeight" src="assets/CompanyLogos/whiteLotusInteractive.png">
                             </a>
                         </div>
-                        <div class="col-md-3 offset-md-0 mobile-space col-sm-6 offset-sm-3">
+
+                        <div class="partnerDivider"></div>
+                        <div class="col-md-3 offset-md-0 col-sm-6 offset-sm-3">
                             <a href="http://www.overflowgames.se/" target="_blank">
                                 <img class="partnerGameImgWidth" src="assets/CompanyLogos/overflow.png">
                             </a>
@@ -839,25 +878,32 @@
 
 
                         <!-- New Row -->
-                        <div class="w-100 rowSpacer2x"></div>
+                        <div class="w-100 partnerGameSpacer"></div>
                         <!-- New Row -->
 
-                        <div class="col-md-3 offset-md-0 mobile-space col-sm-6 offset-sm-3">
+                        <div class="partnerDivider"></div>
+                        <div class="col-md-3 offset-md-0 col-sm-6 offset-sm-3">
                             <a href="https://store.steampowered.com/app/494150/The_Thrill_of_the_Fight__VR_Boxing/" target="_blank">
                                <img class="partnerGameImgWidth" src="assets/CompanyLogos/thrillofthefight.jpg">
                            </a>
                         </div>
-                        <div class="col-md-3 offset-md-0 mobile-space col-sm-6 offset-sm-3">
+
+                        <div class="partnerDivider"></div>
+                        <div class="col-md-3 offset-md-0 col-sm-6 offset-sm-3">
                             <a href="https://uvrtech.com/home" target="_blank">
                                 <img class="partnerGameImgWidth" src="assets/CompanyLogos/uvr.png">
                             </a>
                         </div>
-                        <div class="col-md-3 offset-md-0 mobile-space col-sm-6 offset-sm-3">
+
+                        <div class="partnerDivider"></div>
+                        <div class="col-md-3 offset-md-0 col-sm-6 offset-sm-3">
                             <a href="https://store.steampowered.com/app/525640/agecheck" target="_blank">
                                 <img class="partnerGameImgWidth" src="assets/CompanyLogos/bulletsandmorevr.jpg">
                             </a>
                         </div>
-                        <div class="col-md-3 offset-md-0 mobile-space col-sm-6 offset-sm-3">
+
+                        <div class="partnerDivider"></div>
+                        <div class="col-md-3 offset-md-0 col-sm-6 offset-sm-3">
                             <a href="http://www.firehosegames.com/" target="_blank">
                                 <img class="partnerGameImgHeight" src="assets/CompanyLogos/firehose.png">
                             </a>
@@ -865,25 +911,32 @@
 
 
                         <!-- New Row -->
-                        <div class="w-100 rowSpacer2x"></div>
+                        <div class="w-100 partnerGameSpacer"></div>
                         <!-- New Row -->
 
-                        <div class="col-md-3 offset-md-0 mobile-space col-sm-6 offset-sm-3">
+                        <div class="partnerDivider"></div>
+                        <div class="col-md-3 offset-md-0 col-sm-6 offset-sm-3">
                             <a href="http://somatic.dk/" target="_blank">
                                <img class="partnerGameImgHeight" src="assets/CompanyLogos/somatic.png">
                            </a>
                         </div>
-                        <div class="col-md-3 offset-md-0 mobile-space col-sm-6 offset-sm-3">
+
+                        <div class="partnerDivider"></div>
+                        <div class="col-md-3 offset-md-0 col-sm-6 offset-sm-3">
                             <a href="http://www.alientrap.com/" target="_blank">
                                 <img class="partnerGameImgWidth" src="assets/CompanyLogos/alientrap.png">
                             </a>
                         </div>
-                        <div class="col-md-3 offset-md-0 mobile-space col-sm-6 offset-sm-3">
+
+                        <div class="partnerDivider"></div>
+                        <div class="col-md-3 offset-md-0 col-sm-6 offset-sm-3">
                             <a href="https://radiantcrusade.com/" target="_blank">
                                 <img class="partnerGameImgWidth" src="assets/CompanyLogos/radiance.png">
                             </a>
                         </div>
-                        <div class="col-md-3 offset-md-0 mobile-space col-sm-6 offset-sm-3">
+
+                        <div class="partnerDivider"></div>
+                        <div class="col-md-3 offset-md-0 col-sm-6 offset-sm-3">
                             <a href="http://www.croteam.com/" target="_blank">
                                 <img class="partnerGameImgWidth" src="assets/CompanyLogos/croteam.png">
                             </a>
@@ -891,25 +944,32 @@
 
 
                         <!-- New Row -->
-                        <div class="w-100 rowSpacer2x"></div>
+                        <div class="w-100 partnerGameSpacer"></div>
                         <!-- New Row -->
 
-                        <div class="col-md-3 offset-md-0 mobile-space col-sm-6 offset-sm-3">
+                        <div class="partnerDivider"></div>
+                        <div class="col-md-3 offset-md-0 col-sm-6 offset-sm-3">
                             <a href="http://www.i-illusions.com/home/" target="_blank">
                                <img class="partnerGameImgWidth" src="assets/CompanyLogos/i-illusions.png">
                            </a>
                         </div>
-                        <div class="col-md-3 offset-md-0 mobile-space col-sm-6 offset-sm-3">
+
+                        <div class="partnerDivider"></div>
+                        <div class="col-md-3 offset-md-0 col-sm-6 offset-sm-3">
                             <a href="http://holos.io/" target="_blank">
                                 <img class="partnerGameImgWidth" src="assets/CompanyLogos/holos.png">
                             </a>
                         </div>
-                        <div class="col-md-3 offset-md-0 mobile-space col-sm-6 offset-sm-3">
+
+                        <div class="partnerDivider"></div>
+                        <div class="col-md-3 offset-md-0 col-sm-6 offset-sm-3">
                             <a href="https://www.masterpiecevr.com/" target="_blank">
                                 <img class="partnerGameImgWidth" src="assets/CompanyLogos/masterpiecevr.png">
                             </a>
                         </div>
-                        <div class="col-md-3 offset-md-0 mobile-space col-sm-6 offset-sm-3">
+
+                        <div class="partnerDivider"></div>
+                        <div class="col-md-3 offset-md-0 col-sm-6 offset-sm-3">
                             <a href="http://starloopstudios.com/" target="_blank">
                                 <img class="partnerGameImgWidth" src="assets/CompanyLogos/starloop.png">
                             </a>
@@ -917,45 +977,57 @@
 
 
                         <!-- New Row -->
-                        <div class="w-100 rowSpacer2x"></div>
+                        <div class="w-100 partnerGameSpacer"></div>
                         <!-- New Row -->
 
-                        <div class="col-md-3 offset-md-0 mobile-space col-sm-6 offset-sm-3">
+                        <div class="partnerDivider"></div>
+                        <div class="col-md-3 offset-md-0 col-sm-6 offset-sm-3">
                             <a href="https://www.wearvr.com/developers/comrex-ag/apps" target="_blank">
                                <img class="partnerGameImgWidth" src="assets/CompanyLogos/comrexAG.jpg">
                            </a>
                         </div>
-                        <div class="col-md-3 offset-md-0 mobile-space col-sm-6 offset-sm-3">
+
+                        <div class="partnerDivider"></div>
+                        <div class="col-md-3 offset-md-0 col-sm-6 offset-sm-3">
                             <a href="https://store.steampowered.com/app/618500/Hailstorm_VR/" target="_blank">
                                 <img class="partnerGameImgWidth" src="assets/CompanyLogos/slimeq.jpg">
                             </a>
                         </div>
-                        <div class="col-md-3 offset-md-0 mobile-space col-sm-6 offset-sm-3">
+
+                        <div class="partnerDivider"></div>
+                        <div class="col-md-3 offset-md-0 col-sm-6 offset-sm-3">
                             <a href="https://store.steampowered.com/app/522250/Quick_Draw/" target="_blank">
                                 <img class="partnerGameImgWidth" src="assets/CompanyLogos/playingwithmatches.jpg">
                             </a>
                         </div>
-                        <div class="col-md-3 offset-md-0 mobile-space col-sm-6 offset-sm-3">
+
+                        <div class="partnerDivider"></div>
+                        <div class="col-md-3 offset-md-0 col-sm-6 offset-sm-3">
                             <a href="http://www.thesolusproject.com/" target="_blank">
                                 <img class="partnerGameImgWidth" src="assets/CompanyLogos/hourences.jpg">
                             </a>
                         </div>
 
                         <!-- New Row -->
-                        <div class="w-100 rowSpacer2x"></div>
+                        <div class="w-100 partnerGameSpacer"></div>
                         <!-- New Row -->
 
-                        <div class="col-md-3 offset-md-0 mobile-space col-sm-6 offset-sm-3">
+                        <div class="partnerDivider"></div>
+                        <div class="col-md-3 offset-md-0 col-sm-6 offset-sm-3">
                             <a href="http://giantarmy.com/" target="_blank">
                                <img class="partnerGameImgWidth" src="assets/CompanyLogos/giantarmy.png">
                            </a>
                         </div>
-                        <div class="col-md-3 offset-md-0 mobile-space col-sm-6 offset-sm-3">
+
+                        <div class="partnerDivider"></div>
+                        <div class="col-md-3 offset-md-0 col-sm-6 offset-sm-3">
                             <a href="http://www.keepdefending.com/home.htm" target="_blank">
                                 <img class="partnerGameImgWidth" src="assets/CompanyLogos/fastertimegameslimited.jpg">
                             </a>
                         </div>
-                        <div class="col-md-3 offset-md-0 mobile-space col-sm-6 offset-sm-3">
+
+                        <div class="partnerDivider"></div>
+                        <div class="col-md-3 offset-md-0 col-sm-6 offset-sm-3">
                             <a href="http://alvios.com/" target="_blank">
                                 <img class="partnerGameImgWidth" src="assets/CompanyLogos/alvios.png">
                             </a>
