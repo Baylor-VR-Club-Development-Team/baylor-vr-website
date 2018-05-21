@@ -311,6 +311,11 @@ body {
     -ms-transform: translate(-50%, -50%);
 }
 
+.teamList {
+    margin-top: 20px;
+    font-size: 20px;
+}
+
 
 /*eSports*/
 
@@ -512,8 +517,12 @@ body {
 /* Mobile Only Spacing */
 
 @media screen and (max-width: 767px) {
-    .mobile-space {
+    .mobile-space-bottom {
         margin-bottom: 25px;
+    }
+
+    .mobile-space-top {
+        margin-top: 25px;
     }
 
     .cardOfficer {
