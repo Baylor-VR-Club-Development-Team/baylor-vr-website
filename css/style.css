@@ -19,6 +19,7 @@ body {
 }
 
 .homeImg {
+    margin-top: -250px;
     z-index: -999;
     width: 100%;
     -webkit-filter: blur(2px);

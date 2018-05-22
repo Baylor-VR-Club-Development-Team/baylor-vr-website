@@ -6,7 +6,7 @@ var index = 1;
 const homeSiema = new Siema({
     selector: '.photoSlider',
     duration: 800,
-    easing: 'ease-out',
+    easing: 'ease-in-out',
     perPage: 1,
     startIndex: 0,
     draggable: false,
@@ -19,9 +19,14 @@ const homeSiema = new Siema({
     }
 });
 
+// Home Image Slider
+setInterval(function () {
+    homeSiema.next();
+}, 5000);
+
 //Set the first one before the Interval
 $('#rotate').html(list[0]);
-// Interval for weAre Slider
+// Function called to change the WeAre tag
 function changeWeAre() {
     if (index >= list.length) {
         index = 0;
@@ -29,12 +34,6 @@ function changeWeAre() {
     $('#rotate').html(list[index]);
     index++;
 }
-// Home Image Slider
-setInterval(function () {
-    homeSiema.next();
-}, 5000);
-
-
 // End Home Scroller
 
 //ScrollSpy
