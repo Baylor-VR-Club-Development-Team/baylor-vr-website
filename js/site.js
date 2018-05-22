@@ -14,19 +14,21 @@ const homeSiema = new Siema({
     threshold: 20,
     loop: true,
     rtl: true,
+    onChange: () => {
+        changeWeAre();
+    }
 });
 
 //Set the first one before the Interval
 $('#rotate').html(list[0]);
 // Interval for weAre Slider
-setInterval(function () {
+function changeWeAre() {
     if (index >= list.length) {
         index = 0;
     }
     $('#rotate').html(list[index]);
     index++;
-}, 5850);
-
+}
 // Home Image Slider
 setInterval(function () {
     homeSiema.next();
