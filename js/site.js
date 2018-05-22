@@ -1,14 +1,38 @@
-// Home We Are Scroller
+// Home page
 var list = ["VR", "a Team", "the future"];
-var index = 0;
+var index = 1;
 
+// Slider Object
+const homeSiema = new Siema({
+    selector: '.photoSlider',
+    duration: 800,
+    easing: 'ease-out',
+    perPage: 1,
+    startIndex: 0,
+    draggable: false,
+    multipleDrag: false,
+    threshold: 20,
+    loop: true,
+    rtl: true,
+});
+
+//Set the first one before the Interval
+$('#rotate').html(list[0]);
+// Interval for weAre Slider
 setInterval(function () {
     if (index >= list.length) {
         index = 0;
     }
     $('#rotate').html(list[index]);
     index++;
-}, 3000);
+}, 5850);
+
+// Home Image Slider
+setInterval(function () {
+    homeSiema.next();
+}, 5000);
+
+
 // End Home Scroller
 
 //ScrollSpy
