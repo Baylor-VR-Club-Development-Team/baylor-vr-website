@@ -526,6 +526,23 @@ body {
         margin-top: 25px;
     }
 
+    .homeImgWrapper {
+        width: auto;
+        height: 700px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .homeImg {
+        margin-top: 0px;
+        width: auto;
+        height: 700px;
+
+        left: -50%;
+        margin-left: 150px;
+        position: absolute;
+    }
+
     .cardOfficer {
         margin-left: auto;
         margin-right: auto;
@@ -552,10 +569,6 @@ body {
         margin-top: 0px;
     }
 
-    .homeImg {
-        height: 700px;
-        width: auto;
-    }
 
     .bottom-left {
         width: 100%;
