@@ -518,6 +518,11 @@ body {
 /* Mobile Only Spacing */
 
 @media screen and (max-width: 767px) {
+    .logoName {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
     .mobile-space-bottom {
         margin-bottom: 25px;
     }
