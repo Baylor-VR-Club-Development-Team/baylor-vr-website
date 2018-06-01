@@ -514,6 +514,12 @@ body {
     color: #024833;
 }
 
+/*Contact Form Styles*/
+
+.modal-content {
+    background-color: #484B51 !important;
+}
+
 
 /* Mobile Only Spacing */
 
@@ -594,3 +600,7 @@ body {
 /* #024833 - Green */
 
 /* #FFEE37 - Yellow */
+
+/* #202225 - Dark Gray */
+
+/* #484B51 - Light Gray */

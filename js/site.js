@@ -67,6 +67,70 @@ $(document).ready(function () {
 // End Twitch Section
 
 
+// Form Validator for Contact
+//$.validator.setDefaults({
+//    submitHandler: function () {
+//        alert("submitted!");
+//    }
+//});
+
+
+$(document).ready(function () {
+    $("#form").validate({
+        debug: false,
+        rules: {
+            email: {
+                required: true,
+                email: true
+            },
+            name: {
+                required: true,
+                rangelength: [1, 30]
+            },
+            message: {
+                required: true,
+                rangelength: [1, 500]
+            }
+        },
+        messages: {
+            email: {
+                required: "Please specify your email",
+                minlength: "Email must longer than 3 characters",
+            },
+            name: {
+                required: "Please specify your name",
+                rangelength: "Name must be between 1 to 30 characters long"
+            },
+            message: {
+                required: "Please enter a message",
+                rangelength: "Message must be between 1 and 500 characters long"
+            }
+        },
+        errorElement: "div",
+        errorPlacement: function (error, element) {
+            error.addClass("invalid-feedback");
+            error.css("font-size", ".95em");
+            error.insertAfter(element);
+
+        },
+        highlight: function (element, errorClass, validClass) {
+
+            $(element).addClass("is-invalid").removeClass("is-valid");
+        },
+        unhighlight: function (element, errorClass, validClass) {
+            $(element).addClass("is-valid").removeClass("is-invalid");
+        },
+        submitHandler: function (form) {
+            submitHandler: function (form) {
+                // do other things for a valid form
+                form.submit();
+            }
+        }
+    });
+    console.log("Validator active");
+});
+// End Form Validator for Contact
+
 // Smooth Scroll
 $('a[href*="#"]')
     .click(function (event) {

@@ -562,7 +562,9 @@
             <div class="row rowSpacer2x">
                 <div class="col-md-11">
                     Interested in joining our team?
-                    <a href="mailto:baylorvrclub@gmail.com" target="_blank" class="btn btn-outline-success" role="button" aria-pressed="true">Contact Us!</a>
+                    <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#devContact">
+                      Contact Us!
+                    </button>
                 </div>
             </div>
         </div>
@@ -1161,6 +1163,49 @@
             </div>
         </div>
         <!-- End Footer Section -->
+
+        <!-- Contact Forms -->
+        <!-- Modal -->
+        <div class="modal fade" id="devContact" tabindex="-1" role="dialog" aria-labelledby="devContactTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="form">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="devContactTitle">Interested in the Devlopment Team?</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <i class="fas fa-times" style="color:white;"></i>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- Contact Form -->
+                        <form class="needs-validation" id="form" method="post" action="php/contact_form.php">
+                            <div class="form-group row">
+                                <!-- Email -->
+                                <label for="email" class="col-sm-3 col-form-label">Email Address:</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" id="email" name="email" placeholder="Enter valid email address">
+                                </div>
+                            </div>
+                            <!-- Name -->
+                            <div class="form-group row">
+                                <label for="name" class="col-sm-3 col-form-label">Name:</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" id="name" name="name" placeholder="Please enter your name">
+                                </div>
+                            </div>
+                            <!-- Text Area -->
+                            <div class="form-group row">
+                                <label for="message" class="col-sm-3 col-form-label">Message:</label>
+                                <div class="col-sm-9">
+                                    <textarea class="form-control" id="message" name="message" rows="5" placeholder="Type your message here"></textarea>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary float-right">Submit</button>
+                        </form>
+                        <!-- End of Contact Form -->
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
 
@@ -1172,6 +1217,8 @@
 
     <!-- Siema JS-->
     <script src="js/siema.js"></script>
+    <!-- jquery validate -->
+    <script src="js/jquery-validation/jquery-validate.js"></script>
     <!-- Lazy Load XT -->
     <script src="js/lazyload/lazyloadxt.js"></script>
     <script src="js/lazyload/lazyloadxt-bootstrap.js"></script>
