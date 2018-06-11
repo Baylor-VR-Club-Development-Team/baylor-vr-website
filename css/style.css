@@ -514,6 +514,17 @@ body {
     color: #024833;
 }
 
+.alert-bottom {
+    position: fixed;
+    bottom: 5px;
+    left: 2%;
+    width: 96%;
+}
+
+.alert {
+    display: none;
+}
+
 /*Contact Form Styles*/
 
 .modal-content {

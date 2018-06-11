@@ -54,7 +54,10 @@ var getUrlParameter = function getUrlParameter(sParam) {
 
 var tech = getUrlParameter('sent');
 if (tech) {
-    alert("Success, Email Sent!");
+    $(".alert-bottom").show();
+    $('html, body').animate({
+        scrollTop: $("#contact").offset().top
+    }, 100);
 }
 
 //ScrollSpy
