@@ -223,7 +223,7 @@ body {
     width: 100%;
     opacity: 0;
     transition: .5s ease;
-    background-color: rgba(2, 72, 51, 0.8);
+    background-color: rgba(2, 72, 51, 0.6);
 }
 
 .cardOfficer:hover .overlayOfficer {
@@ -263,59 +263,17 @@ body {
     width: 75%;
 }
 
-.cardDeveloper {
-    margin-top: 10px;
-    border-color: #024833;
-
-}
-
-.cardDeveloper img {
-    width: 100%;
-    overflow: hidden;
-}
-
-.overlayDev {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    opacity: 0;
-    transition: .5s ease;
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
-.cardDeveloper:hover .overlayDev {
-    opacity: 1;
-}
-
-.textDev {
-    width: 100%;
-    color: #fff;
-    font-size: 20px;
-    position: absolute;
-    top: 15%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    text-align: center;
-}
-
-.DevBtn {
-    color: #024833;
-    position: absolute;
-    top: 75%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-}
-
 .teamList {
     margin-top: 20px;
     font-size: 20px;
+    display: block;
 }
+
+.devName {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
 
 
 /*eSports*/
@@ -378,6 +336,7 @@ body {
 .partnerComImg {
     width: 100%;
 }
+
 
 .partnerDev ul {
     padding: 5px;
@@ -534,6 +493,91 @@ body {
 
 /* Mobile Only Spacing */
 
+@media screen and (max-width: 1420px) {
+    /*    Home Section Stuff for iPads */
+    .homeImgWrapper {
+        width: auto;
+        height: 700px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .homeImg {
+        margin-top: 0px;
+        width: auto;
+        height: 1000px;
+        left: 1%;
+
+        position: absolute;
+    }
+    .bottom-left {
+        width: 100%;
+        left: 0;
+    }
+
+    /*    Officers - Mobile */
+    .cardOfficer {
+        margin-top: 10px;
+        border-color: #024833;
+        overflow: hidden;
+        max-width: 400px;
+        max-height: 400px;
+    }
+
+    .cardOfficer img {
+        width: 100%;
+    }
+
+    .overlayOfficer {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 1;
+        transition: .5s ease;
+        background-color: rgba(2, 72, 51, 0.2);
+    }
+
+    .cardOfficer:hover .overlayOfficer {
+        opacity: 1;
+    }
+
+    .textOfficer {
+        width: 100%;
+        color: #FFEE37;
+        background-color: rgba(2, 72, 51, 0.4);
+        font-size: 20px;
+        position: absolute;
+        top: 7%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+    .OffBtn {
+        color: #FFEE37;
+        position: absolute;
+        top: 90%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+    }
+
+}
+
+@media screen and (max-width: 1200px) {
+    .partnerDivider {
+        margin-bottom: 25px;
+    }
+    .partnerGameSpacer {
+        margin-top: 0px;
+    }
+}
+
 @media screen and (max-width: 767px) {
     .logoName {
         display: block;
@@ -548,21 +592,9 @@ body {
         margin-top: 25px;
     }
 
-    .homeImgWrapper {
-        width: auto;
-        height: 700px;
-        overflow: hidden;
-        position: relative;
-    }
-
     .homeImg {
-        margin-top: 0px;
-        width: auto;
-        height: 700px;
-
         left: -50%;
         margin-left: 150px;
-        position: absolute;
     }
 
     .cardOfficer {
@@ -587,14 +619,16 @@ body {
         margin-right: auto;
     }
 
-    .partnerGameSpacer {
-        margin-top: 0px;
-    }
+
 
 
     .bottom-left {
         width: 100%;
         left: 0;
+    }
+
+    .twitchBtn {
+        margin-left: 0px;
     }
 
     /*
@@ -603,7 +637,6 @@ body {
     }
 */
 }
-
 
 
 /* Carousel Scaling */

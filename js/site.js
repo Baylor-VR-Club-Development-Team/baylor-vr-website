@@ -36,6 +36,7 @@ function changeWeAre() {
 }
 // End Home Scroller
 
+
 // Get URL Parameters for Contact for Response
 var getUrlParameter = function getUrlParameter(sParam) {
     var sPageURL = decodeURIComponent(window.location.search.substring(1)),
@@ -68,6 +69,25 @@ $('body').scrollspy({
 // End ScrollSpy
 
 // Dev Team Card Carousel
+const devSiema = new Siema({
+    selector: '.devSlider',
+    duration: 400,
+    easing: 'ease-in-out',
+    perPage: {
+        200: 2,
+        800: 3,
+        1240: 4
+    },
+    loop: true,
+    startIndex: 0,
+    draggable: true,
+    multipleDrag: true,
+    threshold: 20
+});
+
+setInterval(function () {
+    devSiema.next();
+}, 5000);
 
 // End Dev Team Card carousel
 
