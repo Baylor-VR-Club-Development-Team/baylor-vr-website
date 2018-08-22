@@ -169,7 +169,7 @@ $(document).ready(function () {
             form.submit();
         }
     });
-    console.log("Validator active");
+    //    console.log("Validator active");
 });
 // End Form Validator for Contact
 

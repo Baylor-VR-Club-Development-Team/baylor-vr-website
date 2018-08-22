@@ -490,6 +490,14 @@ body {
     background-color: #484B51 !important;
 }
 
+.meeting {
+    width: auto;
+    font-size: 1.5em;
+    padding: 10px;
+    background-color: #024833;
+    margin-left: -20%;
+    margin-bottom: 5px;
+}
 
 /* Mobile Only Spacing */
 
@@ -567,6 +575,11 @@ body {
         -ms-transform: translate(-50%, -50%);
     }
 
+    .meeting {
+        margin-left: 0;
+        margin-bottom: 5px;
+    }
+
 }
 
 @media screen and (max-width: 1200px) {
@@ -576,9 +589,17 @@ body {
     .partnerGameSpacer {
         margin-top: 0px;
     }
+    .meeting {
+        margin-left: 0;
+        margin-bottom: 5px;
+    }
 }
 
 @media screen and (max-width: 767px) {
+    .meeting {
+        margin-left: 0;
+        margin-bottom: 5px;
+    }
     .logoName {
         display: block;
         margin-left: auto;
