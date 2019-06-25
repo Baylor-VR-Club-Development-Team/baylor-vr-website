@@ -4,22 +4,16 @@ body {
     font-weight: 400;
     background-color: #202225;
     color: white;
-    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1300px;
 }
 
 .logo {
-    margin-top: -3px;
-    margin-left: 4px;
-}
-
-.homeImgWrapper {
-    max-width: auto;
-    max-height: 700px;
-    overflow: hidden;
+    margin: 5px;
 }
 
 .homeImg {
-    margin-top: -250px;
     z-index: -999;
     width: 100%;
     -webkit-filter: blur(2px);
@@ -29,7 +23,6 @@ body {
 .homePG {
     height: 700px;
     overflow: hidden;
-    margin-bottom: -65px;
 }
 
 .weAre {
@@ -38,6 +31,13 @@ body {
     font-weight: 600;
     background-color: rgba(0, 0, 0, 0.7);
     padding: 0px 20px 0px 20px;
+}
+
+.container-fluid {
+    margin: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 10px;
 }
 
 .bottom-left {
@@ -84,28 +84,16 @@ body {
 
 .lightSection {
     background-color: #484B51;
-    border-top: 1px solid white;
-    padding: 15px;
+    margin-top: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
 }
 
-.darkSection {
-    background-color: #202225;
-    border-top: 1px solid white;
-    padding: 15px;
-}
-
-.section1 {
-    margin-top: 65px;
-}
 
 .sectionTitle {
     font-size: 35px;
-}
-
-.sectionTitleDiv {
-    display: inline;
-    margin-left: 10px;
-    border-right: 1px solid white;
 }
 
 .card-dark {
@@ -167,42 +155,21 @@ body {
 }
 
 .aboutSec {
-    font-size: 17px;
+    font-size: 20px;
+    font-weight: bold;
     width: 100%;
-}
-
-/* Events */
-
-.recentEvent {
-    max-width: 100%;
-}
-
-.ml-5 {
-    margin-left: 90% !important;
-}
-
-.ml-4 {
-    margin-left: 70% !important;
-}
-
-.card-date {
-    padding: 5px 10px 0px 10px;
-    background-color: #024833;
-    color: #FFEE37;
-}
-
-.card-date-upcoming {
-    margin-left: 90%;
-}
-
-.card-date-next {
-    margin-left: 75%;
+    text-align: center;
 }
 
 /* Officers */
 
+
+#officers .row {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
 .cardOfficer {
-    margin-top: 10px;
     border-color: #024833;
     overflow: hidden;
     max-width: 400px;
@@ -215,15 +182,16 @@ body {
 
 .overlayOfficer {
     position: absolute;
+    margin: 0;
+    padding: 0;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    height: 100%;
-    width: 100%;
     opacity: 0;
     transition: .5s ease;
     background-color: rgba(2, 72, 51, 0.6);
+    text-align: center;
 }
 
 .cardOfficer:hover .overlayOfficer {
@@ -274,57 +242,66 @@ body {
     margin-bottom: 20px;
 }
 
-
+.center-text {
+    text-align: center;
+}
 
 /*eSports*/
 
 /*Streaming*/
 
-.badge-online {
-    padding: 5px;
-    background-color: #FF4136;
-    border-radius: 7px;
-    font-weight: 800;
-}
-
-.badge-offline {
-    padding: 5px;
-    background-color: #AAAAAA;
-    border-radius: 7px;
-    font-weight: 800;
-}
-
-.twitchStatInfo {
-    margin-top: 5px;
-}
-
-.twitchBtn {
-    margin-left: 20px;
-}
-
-.btn-outline-twitch {
-    background-color: rgba(0, 0, 0, 0);
-    border-color: #7D5BBE;
-    color: #7D5BBE;
-}
-
-.btn-outline-twitch:hover {
-    background-color: #7D5BBE;
-    border-color: #7D5BBE;
-    color: white !important;
-}
-
-.btn-outline-twitch:link {
-    text-decoration: none;
-    color: #7D5BBE;
-}
-
-.btn-outline-twitch:visited {
-    text-decoration: none;
-    color: #7D5BBE;
-}
-
 /*Partners*/
+
+.partners {
+    position: relative;
+}
+
+.topPartnerDiv {
+    position: relative;
+    height: 200px;
+    width: 30%;
+    margin: 10px;
+    object-fit: cover;
+}
+
+.partnerDivEvent {
+    position: relative;
+    height: 200px;
+    width: 20%;
+    margin: 10px;
+    object-fit: cover;
+}
+
+.partnerDivDonate {
+    position: relative;
+    height: 80px;
+    width: 13%;
+    margin: 5px;
+}
+
+.a-align {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.partnerSectionTitle {
+    margin-top: 50px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.partnerComImg {
+    min-width: 80%;
+    min-height: 80%;
+    max-width: 100%;
+    max-height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+}
 
 .partnerCom .thanks {
     padding: 5px;
@@ -332,11 +309,6 @@ body {
     border: 3px solid white;
     border-radius: 5px;
 }
-
-.partnerComImg {
-    width: 100%;
-}
-
 
 .partnerDev ul {
     padding: 5px;
@@ -390,8 +362,6 @@ body {
 .footer-logo img {
     width: 125px;
     height: auto;
-    margin-left: -25px;
-    margin-top: -5px;
     margin-bottom: 50px;
 }
 
@@ -484,24 +454,10 @@ body {
     display: none;
 }
 
-/*Contact Form Styles*/
-
-.modal-content {
-    background-color: #484B51 !important;
-}
-
-.meeting {
-    width: auto;
-    font-size: 1.5em;
-    padding: 10px;
-    background-color: #024833;
-    margin-left: -20%;
-    margin-bottom: 5px;
-}
-
 /* Mobile Only Spacing */
 
 @media screen and (max-width: 1420px) {
+
     /*    Home Section Stuff for iPads */
     .homeImgWrapper {
         width: auto;
@@ -518,6 +474,7 @@ body {
 
         position: absolute;
     }
+
     .bottom-left {
         width: 100%;
         left: 0;
@@ -526,7 +483,6 @@ body {
     /*    Officers - Mobile */
     .cardOfficer {
         margin-top: 10px;
-        border-color: #024833;
         overflow: hidden;
         max-width: 400px;
         max-height: 400px;
@@ -586,9 +542,11 @@ body {
     .partnerDivider {
         margin-bottom: 25px;
     }
+
     .partnerGameSpacer {
         margin-top: 0px;
     }
+
     .meeting {
         margin-left: 0;
         margin-bottom: 5px;
@@ -600,11 +558,13 @@ body {
         margin-left: 0;
         margin-bottom: 5px;
     }
+
     .logoName {
         display: block;
         margin-left: auto;
         margin-right: auto;
     }
+
     .mobile-space-bottom {
         margin-bottom: 25px;
     }
@@ -626,6 +586,7 @@ body {
     .card-date-upcoming {
         margin-left: 70%;
     }
+
     .card-date-next {
         margin-left: 70%;
     }
