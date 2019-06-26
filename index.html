@@ -10,10 +10,14 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-140787281-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
 
-      gtag('config', 'UA-140787281-1');
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-140787281-1');
+
     </script>
 
     <!-- Other Header Stuff -->
@@ -37,8 +41,8 @@
 <body>
     <nav class="navbar sticky-top navbar-expand-xl navbar-dark" id="navScroll">
         <a class="navbar-brand logoName" href="#">
-            <img class="logo" src="assets/vrlogo.webp" width="50" height="50" alt="Baylor VR Logo">
-            BAYLOR VR CLUB
+            <img class="logo" src="assets/vrlogo.webp" width="50px" height="50px" alt="Baylor VR Logo">
+            BAYLOR VR
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -94,7 +98,7 @@
     <!-- End Home Section -->
 
     <!-- Start About Section -->
-    <div class="lightSection section1" id="about">
+    <div class="lightSection" id="about">
         <div class="row">
             <div class="col-lg-2 col-md-3 col-sm-12">
                 <div class="sectionTitle">
@@ -260,11 +264,11 @@
         <!-- Project Cards (generated at https://lab.lepture.com/github-cards/)-->
         <div class="row justify-content-center">
             <!-- Project 1 -->
-            <div class="col-md-6 col-lg-5 col-xl-4">
+            <div class="project-card">
                 <div class="github-card" data-github="Baylor-VR-Club-Development-Team/black-gospel-music-vr" data-width="400" data-height="" data-theme="default"></div>
                 <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
             </div>
-            <div class="col-md-6 col-lg-5 col-xl-4">
+            <div class="project-card">
                 <div class="github-card" data-github="Baylor-VR-Club-Development-Team/baylor-vr-website" data-width="400" data-height="" data-theme="default"></div>
                 <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
             </div>
@@ -374,7 +378,7 @@
             </div>
         </div>
         <div class="row rowSpacer">
-            <iframe src="https://www.cvreleague.com/" height="500" width="100%"></iframe>
+            <iframe src="https://www.cvreleague.com/" height="745" width="100%"></iframe>
         </div>
     </div>
     <!-- End eSPORTS Section -->
@@ -434,7 +438,7 @@
 
         <div class="row d-flex flex-row justify-content-around partners">
             <div class="topPartnerDiv">
-                <a href="https://www.oculus.com/" target="_blank" data-toggle="tooltip" data-placement="auto" title="Dedicated Development Support">
+                <a href="https://www.oculus.com/" target="_blank" data-toggle="tooltip" data-placement="top" title="Dedicated Development Support">
                     <img class="partnerComImg" src="assets/CompanyLogos/oculus.webp" alt="Oculus Logo">
                 </a>
             </div>
@@ -760,6 +764,7 @@
             <div class="col">
                 <script src="https://platform.linkedin.com/in.js" type="text/javascript">
                     lang: en_US
+
                 </script>
                 <script type="IN/FollowCompany" data-id="27248225" data-counter="bottom"></script>
             </div>

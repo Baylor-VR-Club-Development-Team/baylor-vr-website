@@ -6,7 +6,7 @@ body {
     color: white;
     margin-left: auto;
     margin-right: auto;
-    width: 1300px;
+    max-width: 1300px;
 }
 
 .logo {
@@ -158,7 +158,7 @@ body {
     font-size: 20px;
     font-weight: bold;
     width: 100%;
-    text-align: center;
+    text-align: left;
 }
 
 /* Officers */
@@ -246,22 +246,28 @@ body {
     text-align: center;
 }
 
+.project-card {
+    margin: 10px;
+}
+
 /*eSports*/
 
 /*Streaming*/
 
 /*Partners*/
 
-.partners {
-    position: relative;
-}
+.partners {}
 
 .topPartnerDiv {
     position: relative;
     height: 160px;
-    width: 25%;
+    width: 300px;
     margin: 10px;
     object-fit: cover;
+}
+
+.tooltip {
+    position: static;
 }
 
 .partnerDivEvent {
