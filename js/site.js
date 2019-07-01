@@ -195,3 +195,15 @@ $('a[href*="#"]')
         }
     });
 // End Smooth Scroll
+
+// Collapse navbar on click
+$('.navbar-nav>li>a').on('click', function () {
+    $('.navbar-collapse').collapse('hide');
+});
+
+// Initialize tool tip at the top
+$(document).ready(function () {
+    $('[data-toggle="tooltip"]').tooltip({
+        'placement': 'top'
+    });
+});

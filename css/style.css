@@ -242,8 +242,9 @@ body {
     margin-bottom: 20px;
 }
 
-.center-text {
+.align-center {
     text-align: center;
+    align-content: center;
 }
 
 .project-card {
@@ -366,15 +367,24 @@ body {
 }
 
 .footer-logo img {
-    width: 125px;
+    width: 50%;
     height: auto;
-    margin-bottom: 50px;
 }
 
 .footer-nav li a {
     -webkit-transition: .25s all ease;
     -moz-transition: .25s all ease;
     transition: .25s all ease;
+}
+
+.right-align {
+    align-content: right;
+    text-align: right;
+}
+
+.left-align {
+    align-content: left;
+    text-align: left;
 }
 
 .foot-item {
@@ -445,6 +455,14 @@ body {
     color: #7D5BBE;
 }
 
+.discord:hover {
+    color: #7289DA;
+}
+
+.linkedin:hover {
+    color: #0077B5;
+}
+
 .mail:hover {
     color: #024833;
 }
@@ -496,23 +514,6 @@ body {
 
     .cardOfficer img {
         width: 100%;
-    }
-
-    .overlayOfficer {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        height: 100%;
-        width: 100%;
-        opacity: 1;
-        transition: .5s ease;
-        background-color: rgba(2, 72, 51, 0.2);
-    }
-
-    .cardOfficer:hover .overlayOfficer {
-        opacity: 1;
     }
 
     .textOfficer {
