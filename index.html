@@ -85,7 +85,45 @@
             </ul>
         </div>
     </nav>
-
+    
+    <!-- Begin Mailchimp Signup Form -->
+    <div id="emailSubscribeModal" class="modal">
+        <div class="modal-content">
+            <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
+            <div id="mc_embed_signup">
+                <form action="https://baylorvrclub.us19.list-manage.com/subscribe/post?u=6b54eb1e07b6018102361cb34&amp;id=59ffafe94a" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                    <div id="mc_embed_signup_scroll">
+                    <h2>Subscribe</h2>
+                <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+                <div class="mc-field-group">
+                    <label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
+                </label>
+                    <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+                </div>
+                <div class="mc-field-group">
+                    <label for="mce-FNAME">First Name </label>
+                    <input type="text" value="" name="FNAME" class="" id="mce-FNAME">
+                </div>
+                <div class="mc-field-group">
+                    <label for="mce-LNAME">Last Name </label>
+                    <input type="text" value="" name="LNAME" class="" id="mce-LNAME">
+                </div>
+                    <div id="mce-responses" class="clear">
+                        <div class="response" id="mce-error-response" style="display:none"></div>
+                        <div class="response" id="mce-success-response" style="display:none"></div>
+                    </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_6b54eb1e07b6018102361cb34_59ffafe94a" tabindex="-1" value=""></div>
+                    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+                    </div>
+                </form>
+            </div>
+            <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
+            
+            <span class="close">&times;</span>
+        </div>
+    </div>
+    <!--End mc_embed_signup-->
+    
     <!-- Start Home Section -->
     <div class="row" id="home">
         <div class="col-md-12 homePG">
@@ -99,6 +137,11 @@
                 <div class="homeImgWrapper">
                     <img class="homeImg" src="assets/home3.webp" alt="Playing Fruit Ninja at Club Meeting">
                 </div>
+            </div>
+            
+            <div class="emailSubscribe">
+                Want to stay up to date? <br/>
+                <button id="emailSubscribeButton" class="btn btn-secondary">Subscribe to our email</button>
             </div>
 
             <div class="row">
@@ -449,325 +492,19 @@
             <h5 class="col partnerSectionTitle">Special Thanks to these companies that have made this club possible!</h5>
         </div>
 
-        <div class="row d-flex flex-row justify-content-around partners">
-            <div class="topPartnerDiv">
-                <a href="https://www.oculus.com/" target="_blank" data-toggle="tooltip" data-placement="top" title="Dedicated Development Support">
-                    <img class="partnerComImg" src="assets/CompanyLogos/oculus.webp" alt="Oculus Logo">
-                </a>
-            </div>
-
-            <div class="topPartnerDiv">
-                <a class="a-align" href="http://foundry10.org/" target="_blank" data-toggle="tooltip" data-placement="auto" title="Gaming PC Donation">
-                    <img class="partnerComImg" src="assets/CompanyLogos/foundry10.webp" alt="Foundry 10 Logo">
-                </a>
-            </div>
-
-            <div class="topPartnerDiv">
-                <a href="http://corporate.exxonmobil.com/" target="_blank" data-toggle="tooltip" data-placement="auto" title="Recruitment of VR Developers">
-                    <img class="partnerComImg" src="assets/CompanyLogos/ExxonMobil.webp" alt="Exxon Mobil Logo">
-                </a>
-            </div>
-
-            <div class="topPartnerDiv">
-                <a href="https://artivive.com/" target="_blank" data-toggle="tooltip" data-placement="auto" title="AR Development Partner">
-                    <img class="partnerComImg" src="assets/CompanyLogos/artivive.webp" alt="Artivive">
-                </a>
-            </div>
-
-            <div class="topPartnerDiv">
-                <a href="https://www.thegamergloves.com/" target="_blank" data-toggle="tooltip" data-placement="auto" title="eSports Team Sponsor">
-                    <img class="partnerComImg" src="assets/CompanyLogos/GamerGloves.webp" alt="Gamer Gloves Logo">
-                </a>
-            </div>
-
-            <div class="topPartnerDiv">
-                <a href="https://styly.cc/?lang=en" target="_blank" data-toggle="tooltip" data-placement="auto" title="Recruitment of VR Developers">
-                    <img class="partnerComImg" src="assets/CompanyLogos/styly.webp" alt="Syly Logo">
-                </a>
-            </div>
-
-            <div class="topPartnerDiv">
-                <a href="https://liv.tv/" target="_blank" data-toggle="tooltip" data-placement="auto" title=" Dedicated Streaming Support and Access to Hardware">
-                    <img class="partnerComImg" src="assets/CompanyLogos/LIV.webp" alt="LIV Logo">
-                </a>
-            </div>
-
-            <div class="topPartnerDiv">
-                <a href="https://vivereport.com/" target="_blank" data-toggle="tooltip" data-placement="auto" title="Press and Outreach">
-                    <img class="partnerComImg" src="assets/CompanyLogos/vivereport.webp" alt="Vive Report Logo">
-                </a>
-            </div>
-
-            <div class="topPartnerDiv">
-                <a href="http://austinvirtualleague.com/" target="_blank" data-toggle="tooltip" data-placement="auto" title="Press and Outreach">
-                    <img class="partnerComImg" src="assets/CompanyLogos/austinvirtualleague.webp" alt="AVL Logo">
-                </a>
-            </div>
-        </div>
+        <div class="row d-flex flex-row justify-content-around partners" id="topPartners"></div>
 
         <div class="row">
             <h5 class="col partnerSectionTitle">Developers Who Have Sponsored Events</h5>
         </div>
 
-        <div class="row d-flex flex-row justify-content-around partners">
-            <div class="partnerDivEvent">
-                <a href="https://superhotgame.com/" target="_blank">
-                    <img class="partnerComImg" src="assets/CompanyLogos/superhot.webp" alt="Superhot Logo">
-                </a>
-            </div>
-
-            <div class="partnerDivEvent">
-                <a href="https://survios.com/" target="_blank">
-                    <img class="partnerComImg" src="assets/CompanyLogos/survios.webp" alt="Survivos Logo">
-                </a>
-            </div>
-
-            <div class="partnerDivEvent">
-                <a href="http://rustltd.com/" target="_blank">
-                    <img class="partnerComImg" src="assets/CompanyLogos/rustltd.webp" alt="Rust Ltd. Logo">
-                </a>
-            </div>
-
-            <div class="partnerDivEvent">
-                <a href="https://store.steampowered.com/app/538330/AEscape_VR/" target="_blank">
-                    <img class="partnerComImg" src="assets/CompanyLogos/aescapevr.webp" alt="Aescape VR Logo">
-                </a>
-            </div>
-        </div>
+        <div class="row d-flex flex-row justify-content-around partners" id="developerEventPartners"></div>
 
         <div class="row">
             <h5 class="col partnerSectionTitle">Developers Who Have Donated Games</h5>
         </div>
 
-        <div class="row d-flex flex-row justify-content-around partners">
-            <div class="partnerDivDonate">
-                <a href="http://www.dreadhalls.com/" target="_blank">
-                    <img class="partnerComImg" src="assets/CompanyLogos/dreadhalls.webp" alt="Dreadhalls Logo">
-                </a>
-            </div>
-
-            <div class="partnerDivDonate">
-                <a href="http://www.ndreams.com/" target="_blank">
-                    <img class="partnerComImg" src="assets/CompanyLogos/ndreams.webp" alt="nDreams Logo">
-                </a>
-            </div>
-
-            <div class="partnerDivDonate">
-                <a href="http://nopact.com/" target="_blank">
-                    <img class="partnerComImg" src="assets/CompanyLogos/nopact.webp" alt="nopact Logo">
-                </a>
-            </div>
-
-            <div class="partnerDivDonate">
-                <a href="https://www.marineverse.com/" target="_blank">
-                    <img class="partnerComImg" src="assets/CompanyLogos/marineverse.webp" alt="Marine Verse Logo">
-                </a>
-            </div>
-
-            <div class="partnerDivDonate">
-                <a href="https://owlchemylabs.com/" target="_blank">
-                    <img class="partnerComImg" src="assets/CompanyLogos/OwlchemyLabs.webp" alt="Owlchemy Labs Logo">
-                </a>
-            </div>
-
-            <div class="partnerDivDonate">
-                <a href="https://www.schellgames.com/" target="_blank">
-                    <img class="partnerComImg" src="assets/CompanyLogos/SchellGames.webp" alt="Schell Games Logo">
-                </a>
-            </div>
-
-            <div class="partnerDivDonate">
-                <a href="http://ultimerse.com/" target="_blank">
-                    <img class="partnerComImg" src="assets/CompanyLogos/ultimerse.webp" alt="Ultimerse Logo">
-                </a>
-            </div>
-
-            <div class="partnerDivDonate">
-                <a href="http://vertigo-games.com/" target="_blank">
-                    <img class="partnerComImg" src="assets/CompanyLogos/vertigogames.webp" alt="Vertigo Games Logo">
-                </a>
-            </div>
-
-            <div class="partnerDivDonate">
-                <a href="https://www.earthfall.com/" target="_blank">
-                    <img class="partnerComImg" src="assets/CompanyLogos/holospark.webp" alt="Holospark Logo">
-                </a>
-            </div>
-
-            <div class="partnerDivDonate">
-                <a href="http://www.tothetopvr.com/" target="_blank">
-                    <img class="partnerComImg" src="assets/CompanyLogos/tothetop.webp" alt="To The Top Logo">
-                </a>
-            </div>
-
-            <div class="partnerDivDonate">
-                <a href="http://www.mixedrealms.com/" target="_blank">
-                    <img class="partnerComImg" src="assets/CompanyLogos/mixedrealms.webp" alt="Mixed Realms Logo">
-                </a>
-            </div>
-
-            <div class="partnerDivDonate">
-                <a href="http://aestheticinteractive.com" target="_blank">
-                    <img class="partnerComImg" src="assets/CompanyLogos/aestheticinteractive.webp" alt="Aesthetic Interactive Logo">
-                </a>
-            </div>
-            <div class="partnerDivDonate">
-                <a href="http://acceleroto.com/" target="_blank">
-                    <img class="partnerComImg" src="assets/CompanyLogos/acceleroto.webp" alt="Acceleroto Logo">
-                </a>
-            </div>
-
-            <div class="partnerDivDonate">
-                <a href="http://gametroopers.net/" target="_blank">
-                    <img class="partnerComImg" src="assets/CompanyLogos/gametroopers.webp" alt="Game Troopers Logo">
-                </a>
-            </div>
-
-            <div class="partnerDivDonate">
-                <a href="https://ladrik.itch.io/undead-development" target="_blank">
-                    <img class="partnerComImg" src="assets/CompanyLogos/UndeadDevelopment.webp" alt="Undead Development Logo">
-                </a>
-            </div>
-
-            <div class="partnerDivDonate">
-                <a href="https://www.vrnerds.de/" target="_blank">
-                    <img class="partnerComImg" src="assets/CompanyLogos/vrnerds.webp" alt="VR Nerds Logo">
-                </a>
-            </div>
-
-            <div class="partnerDivDonate">
-                <a href="https://www.ovrshot.com/" target="_blank">
-                    <img class="partnerComImg" src="assets/CompanyLogos/windowlickergames.webp" alt="Window Licker Games Logo">
-                </a>
-            </div>
-
-            <div class="partnerDivDonate">
-                <a href="http://www.whitelotusinteractive.com/" target="_blank">
-                    <img class="partnerComImg" src="assets/CompanyLogos/whiteLotusInteractive.webp" alt="White Lotus Interactive Logo">
-                </a>
-            </div>
-
-            <div class="partnerDivDonate">
-                <a href="http://www.overflowgames.se/" target="_blank">
-                    <img class="partnerComImg" src="assets/CompanyLogos/overflow.webp" alt="Overflow Logo">
-                </a>
-            </div>
-
-            <div class="partnerDivDonate">
-                <a href="http://alvios.com/" target="_blank">
-                    <img class="partnerComImg" src="assets/CompanyLogos/alvios.webp" alt="Alvrios Games Logo">
-                </a>
-            </div>
-
-
-            <div class="partnerDivDonate">
-                <a href="https://store.steampowered.com/app/494150/The_Thrill_of_the_Fight__VR_Boxing/" target="_blank">
-                    <img class="partnerComImg" src="assets/CompanyLogos/thrillofthefight.webp" alt="Thrill to the Fight! Logo">
-                </a>
-            </div>
-
-            <div class="partnerDivDonate">
-                <a href="https://uvrtech.com/home" target="_blank">
-                    <img class="partnerComImg" src="assets/CompanyLogos/uvr.webp" alt="UVR Logo">
-                </a>
-            </div>
-
-            <div class="partnerDivDonate">
-                <a href="https://store.steampowered.com/app/525640/agecheck" target="_blank">
-                    <img class="partnerComImg" src="assets/CompanyLogos/bulletsandmorevr.webp" alt="Bullets and More Logo">
-                </a>
-            </div>
-
-            <div class="partnerDivDonate">
-                <a href="http://www.firehosegames.com/" target="_blank">
-                    <img class="partnerComImg" src="assets/CompanyLogos/firehose.webp" alt="Fire Hose Logo">
-                </a>
-            </div>
-
-            <div class="partnerDivDonate">
-                <a href="http://somatic.dk/" target="_blank">
-                    <img class="partnerComImg" src="assets/CompanyLogos/somatic.webp" alt="Somantic Logo">
-                </a>
-            </div>
-
-            <div class="partnerDivDonate">
-                <a href="http://www.alientrap.com/" target="_blank">
-                    <img class="partnerComImg" src="assets/CompanyLogos/alientrap.webp" alt="Alien Trap Logo">
-                </a>
-            </div>
-
-            <div class="partnerDivDonate">
-                <a href="https://radiantcrusade.com/" target="_blank">
-                    <img class="partnerComImg" src="assets/CompanyLogos/radiance.webp" alt="Radiance Logo">
-                </a>
-            </div>
-
-            <div class="partnerDivDonate">
-                <a href="http://www.croteam.com/" target="_blank">
-                    <img class="partnerComImg" src="assets/CompanyLogos/croteam.webp" alt="Croteam Logo">
-                </a>
-            </div>
-
-            <div class="partnerDivDonate">
-                <a href="http://www.i-illusions.com/home/" target="_blank">
-                    <img class="partnerComImg" src="assets/CompanyLogos/i-illusions.webp" alt="I Illusions Logo">
-                </a>
-            </div>
-
-            <div class="partnerDivDonate">
-                <a href="http://holos.io/" target="_blank">
-                    <img class="partnerComImg" src="assets/CompanyLogos/holos.webp" alt="Holos Logo">
-                </a>
-            </div>
-
-            <div class="partnerDivDonate">
-                <a href="https://www.masterpiecevr.com/" target="_blank">
-                    <img class="partnerComImg" src="assets/CompanyLogos/masterpiecevr.webp" alt="Masterpiece VR Logo">
-                </a>
-            </div>
-
-            <div class="partnerDivDonate">
-                <a href="http://starloopstudios.com/" target="_blank">
-                    <img class="partnerComImg" src="assets/CompanyLogos/starloop.webp" alt="Starloop Logo">
-                </a>
-            </div>
-
-            <div class="partnerDivDonate">
-                <a href="https://www.wearvr.com/developers/comrex-ag/apps" target="_blank">
-                    <img class="partnerComImg" src="assets/CompanyLogos/comrexAG.webp" alt="Bitslap Logo">
-                </a>
-            </div>
-
-            <div class="partnerDivDonate">
-                <a href="https://store.steampowered.com/app/618500/Hailstorm_VR/" target="_blank">
-                    <img class="partnerComImg" src="assets/CompanyLogos/slimeq.webp" alt="Hailstorm Logo">
-                </a>
-            </div>
-
-            <div class="partnerDivDonate">
-                <a href="https://store.steampowered.com/app/522250/Quick_Draw/" target="_blank">
-                    <img class="partnerComImg" src="assets/CompanyLogos/playingwithmatches.webp" alt="Quick Draw Logo">
-                </a>
-            </div>
-
-            <div class="partnerDivDonate">
-                <a href="http://www.thesolusproject.com/" target="_blank">
-                    <img class="partnerComImg" src="assets/CompanyLogos/hourences.webp" alt="Solos Logo">
-                </a>
-            </div>
-
-            <div class="partnerDivDonate">
-                <a href="http://giantarmy.com/" target="_blank">
-                    <img class="partnerComImg" src="assets/CompanyLogos/giantarmy.webp" alt="Universe Sandbox Logo">
-                </a>
-            </div>
-
-            <div class="partnerDivDonate">
-                <a href="http://www.keepdefending.com/home.htm" target="_blank">
-                    <img class="partnerComImg" src="assets/CompanyLogos/fastertimegameslimited.webp" alt="Faster Time Games Limited Logo">
-                </a>
-            </div>
-        </div>
+        <div class="row d-flex flex-row justify-content-around partners" id="developerPartners"></div>
     </div>
     <!-- End Partners Section -->
 
@@ -816,8 +553,6 @@
                         <li><a href="#streaming" class="foot-item"><i class="fa fa-angle-right"></i> STREAMING</a></li>
 
                         <li><a href="#partners" class="foot-item"><i class="fa fa-angle-right"></i> PARTNERS</a></li>
-
-                        <li><a href="#contact" class="foot-item"><i class="fa fa-angle-right"></i> CONTACT</a></li>
                     </ul>
                 </div>
             </div>
@@ -853,6 +588,8 @@
         <script src="js/lazyload/lazyloadxt-bootstrap.js"></script>
         <!-- Site JS -->
         <script src="js/site.js"></script>
+        <!-- Modal JS -->
+        <script src="js/modal.js"></script>
         <!-- Font Awesome-->
         <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
         <!-- Google Rich Cards -->
