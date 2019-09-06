@@ -162,13 +162,6 @@ body {
 }
 
 /* Officers */
-
-
-#officers .row {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-}
-
 .cardOfficer {
     border-color: #024833;
     overflow: hidden;

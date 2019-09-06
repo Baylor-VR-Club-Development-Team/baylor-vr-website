@@ -1,6 +1,6 @@
 // Home page
-var list = ["VR", "a Team", "the future"];
-var index = 1;
+const typeWriterWords = ["VR", "a Team", "the future"];
+let index = 1;
 
 // Slider Object
 const homeSiema = new Siema({
@@ -15,7 +15,7 @@ const homeSiema = new Siema({
     loop: true,
     rtl: true,
     onChange: () => {
-        changeWeAre();
+        updateTypeWriter();
     }
 });
 
@@ -25,40 +25,15 @@ setInterval(function () {
 }, 5000);
 
 //Set the first one before the Interval
-$('#rotate').html(list[0]);
+$('#rotate').html(typeWriterWords[0]);
+
 // Function called to change the WeAre tag
-function changeWeAre() {
-    if (index >= list.length) {
+function updateTypeWriter() {
+    if (index >= typeWriterWords.length) {
         index = 0;
     }
-    $('#rotate').html(list[index]);
+    $('#rotate').html(typeWriterWords[index]);
     index++;
-}
-// End Home Scroller
-
-
-// Get URL Parameters for Contact for Response
-var getUrlParameter = function getUrlParameter(sParam) {
-    var sPageURL = decodeURIComponent(window.location.search.substring(1)),
-        sURLVariables = sPageURL.split('&'),
-        sParameterName,
-        i;
-
-    for (i = 0; i < sURLVariables.length; i++) {
-        sParameterName = sURLVariables[i].split('=');
-
-        if (sParameterName[0] === sParam) {
-            return sParameterName[1] === undefined ? true : sParameterName[1];
-        }
-    }
-};
-
-var tech = getUrlParameter('sent');
-if (tech) {
-    $(".alert-bottom").show();
-    $('html, body').animate({
-        scrollTop: $("#contact").offset().top
-    }, 100);
 }
 
 //ScrollSpy
@@ -66,38 +41,18 @@ $('body').scrollspy({
     target: '#navScroll',
     offset: 100
 });
-// End ScrollSpy
-
-// Dev Team Card Carousel
-const devSiema = new Siema({
-    selector: '.devSlider',
-    duration: 400,
-    easing: 'ease-in-out',
-    perPage: {
-        200: 2,
-        800: 3,
-        1240: 4
-    },
-    loop: true,
-    startIndex: 0,
-    draggable: true,
-    multipleDrag: true,
-    threshold: 20
-});
 
 setInterval(function () {
     devSiema.next();
 }, 5000);
-
 // End Dev Team Card carousel
 
 // Twitch Online|Offline Thing
-var online = 'We are currently <span class="badge-online">Online</span>';
-var offline = 'We are currently <span class="badge-offline">Offline</span>';
+const online = 'We are currently <span class="badge-online">Online</span>';
+const offline = 'We are currently <span class="badge-offline">Offline</span>';
 
-$(document).ready(function () {
-    var clientID = "9q24z9k6jxx98x57i3avgecilospmu";
-    var url = "https://api.twitch.tv/kraken/streams/baylorvrclub?client_id=9q24z9k6jxx98x57i3avgecilospmu";
+$(function () {
+    const url = "https://api.twitch.tv/kraken/streams/baylorvrclub?client_id=9q24z9k6jxx98x57i3avgecilospmu";
     $.getJSON(url, function (data) {
         console.log(data);
         if (data.stream == null) {
@@ -107,14 +62,12 @@ $(document).ready(function () {
         }
     });
 });
-
 // End Twitch Section
 
 // Smooth Scroll
-$('a[href*="#"]')
-    .click(function (event) {
-        // On-page links
-        if (
+$('a[href*="#"]').on("click", (function (event) {
+    // On-page links
+    if (
             location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') &&
             location.hostname == this.hostname
         ) {
@@ -127,18 +80,17 @@ $('a[href*="#"]')
                 event.preventDefault();
                 $('html, body').animate({
                     scrollTop: target.offset().top - 75
-                }, 1000);
-            }
+            }, 1000);
         }
-    });
-// End Smooth Scroll
+    }
+}));
 
 // Collapse navbar on click
 $('.navbar-nav>li>a').on('click', function () {
     $('.navbar-collapse').collapse('hide');
 });
 
-/* Top Partners data and render */
+// Top Partners data and render
 const topPartnersData = [
     {
         website: "https://www.oculus.com/",
