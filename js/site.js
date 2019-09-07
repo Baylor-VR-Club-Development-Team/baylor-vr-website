@@ -1,6 +1,6 @@
 // Home page
 const typeWriterWords = ["VR", "a Team", "the future"];
-let index = 1;
+let typeWriterIndex = 1;
 
 // Slider Object
 const homeSiema = new Siema({
@@ -29,11 +29,11 @@ $('#rotate').html(typeWriterWords[0]);
 
 // Function called to change the WeAre tag
 function updateTypeWriter() {
-    if (index >= typeWriterWords.length) {
-        index = 0;
+    if (typeWriterIndex >= typeWriterWords.length) {
+        typeWriterIndex = 0;
     }
-    $('#rotate').html(typeWriterWords[index]);
-    index++;
+    $('#rotate').html(typeWriterWords[typeWriterIndex]);
+    typeWriterIndex++;
 }
 
 //ScrollSpy
@@ -42,37 +42,15 @@ $('body').scrollspy({
     offset: 100
 });
 
-setInterval(function () {
-    devSiema.next();
-}, 5000);
-// End Dev Team Card carousel
-
-// Twitch Online|Offline Thing
-const online = 'We are currently <span class="badge-online">Online</span>';
-const offline = 'We are currently <span class="badge-offline">Offline</span>';
-
-$(function () {
-    const url = "https://api.twitch.tv/kraken/streams/baylorvrclub?client_id=9q24z9k6jxx98x57i3avgecilospmu";
-    $.getJSON(url, function (data) {
-        console.log(data);
-        if (data.stream == null) {
-            $("#TwitchStatus").html(offline);
-        } else {
-            $("#TwitchStatus").html(online);
-        }
-    });
-});
-// End Twitch Section
-
 // Smooth Scroll
 $('a[href*="#"]').on("click", (function (event) {
     // On-page links
     if (
-            location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') &&
-            location.hostname == this.hostname
+        location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') &&
+        location.hostname === this.hostname
     ) {
         // Figure out element to scroll to
-        var target = $(this.hash);
+        let target = $(this.hash);
         target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
         // Does a scroll target exist?
         if (target.length) {
@@ -90,7 +68,104 @@ $('.navbar-nav>li>a').on('click', function () {
     $('.navbar-collapse').collapse('hide');
 });
 
-// Top Partners data and render
+// Renders the partner with the given values and for the given div
+const renderPartner = function (dataArray, parentDivId, partnerDivId) {
+    let list = "";
+    for (let i = 0; i < dataArray.length; i++) {
+        list += `<div class="${partnerDivId}">
+                    <a href="${dataArray[i].website}" target="_blank" data-toggle="tooltip" data-placement="top" title="${dataArray[i].title}">
+                        <img class="partnerComImg" src="${partnersImageFolder + dataArray[i].image}" alt="${dataArray[i].hasOwnProperty("imageAlt") ? dataArray[i].imageAlt : (dataArray[i].title + " Logo")}">
+                    </a>
+                </div>`;
+    }
+    $(parentDivId).append(list);
+};
+
+const renderOfficerCard = function (officer) {
+    return `<div class="col-md-3 cardOfficer">
+                <img src="${officerFolderPath}${officer.image}" alt="${officer.name}">
+                <div class="overlayOfficer">
+                    <div class="textOfficer">
+                        ${officer.name}<br> ${officer.position}
+                    </div>
+                    <div class="OffBtn">
+                        <a href="${officer.linkedIn}" target="_blank" class="btn btn-primary" role="button" aria-pressed="true">LinkedIn</a>
+                    </div>
+                </div>
+            </div>`;
+};
+
+const renderList = function (array, callback) {
+    let render = "";
+    for (let i = 0; i < array.length; i++) {
+        render += callback(array[i]);
+    }
+    return render;
+};
+
+const renderOfficerCards = function () {
+    $("#officerContent").append(renderList(officers, renderOfficerCard));
+};
+
+$(function () {
+    // Render the top partners divs
+    renderPartner(topPartnersData, "#topPartners", "topPartnerDiv");
+    // Render the developer event sponsors divs
+    renderPartner(developerEventPartnersData, "#developerEventPartners", "partnerDivEvent");
+    // Render the developer partners
+    renderPartner(developerPartnersData, "#developerPartners", "partnerDivDonate");
+    // Render the officer cards
+    renderOfficerCards();
+});
+
+/** Data **/
+// Relative path for all of the officer images
+const officerFolderPath = "assets/Officers/";
+
+// Data for all of the officers
+const officers = [
+    {
+        name: "Reece Kemball-Cook",
+        position: "President",
+        image: "ReeceKC/1.webp",
+        linkedIn: "https://www.linkedin.com/in/reece-kemball-cook-54557b150/"
+    },
+    {
+        name: "Alexandra Barnett",
+        position: "Vice President",
+        image: "AliB/1.webp",
+        linkedIn: "https://www.linkedin.com/in/alexandra-barnett-24930a163/"
+    },
+    {
+        name: "Sean Blonien",
+        position: "Director of Development",
+        image: "SeanB/1.webp",
+        linkedIn: "https://www.linkedin.com/in/seanblonien/"
+    },
+    {
+        name: "Cameron Hay",
+        position: "eSports Captain",
+        image: "CameronH/1.webp",
+        linkedIn: ""
+    },
+    {
+        name: "Josh Holland",
+        position: "Treasurer",
+        image: "JoshH/1.webp",
+        linkedIn: "https://www.linkedin.com/in/joshholland1/"
+    },
+    {
+        name: "Brittany LaVergne",
+        position: "Social Media Chair",
+        image: "placeholder_officer.jpg",
+        linkedIn: "https://www.linkedin.com/in/brittany-lavergne/"
+    },
+];
+
+// Relative path for all of the partner images
+const partnersImageFolder = "assets/CompanyLogos/";
+
+// Top Partners data
 const topPartnersData = [
     {
         website: "https://www.oculus.com/",
@@ -148,6 +223,7 @@ const topPartnersData = [
     }
 ];
 
+// Developers who partnered with us for events data
 const developerEventPartnersData = [
     {
         website: "tps://superhotgame.com/",
@@ -171,6 +247,7 @@ const developerEventPartnersData = [
     }
 ];
 
+// Developers who donated us games data
 const developerPartnersData = [
     {
         website: "http://www.dreadhalls.com/",
@@ -363,106 +440,3 @@ const developerPartnersData = [
         title: "Faster Time Games Limited"
     }
 ];
-
-const partnersImageFolder = "assets/CompanyLogos/";
-
-const renderPartner = function (dataArray, parentDivId, partnerDivId) {
-    let list = "";//dataArray[0].hasOwnProperty("imageAlt") ? dataArray[0].imageAlt : dataArray[0].title + " Logo";
-    for (let i = 0; i < dataArray.length; i++) {
-        let imgPath = partnersImageFolder + dataArray[i].image;
-        let alt = dataArray[i].hasOwnProperty("imageAlt") ? dataArray[i].imageAlt : (dataArray[i].title + " Logo");
-        list += "<div class=\"" + partnerDivId + "\">\n<a href=\"" + dataArray[i].website + "\" target=\"_blank\" data-toggle=\"tooltip\" data-placement=\"top\" title=\"" + dataArray[i].title + "\">\n<img class=\"partnerComImg\" src=\"" + imgPath + "\" alt=\"" + alt + "\">\n</a>\n</div>";
-    }
-    $(parentDivId).append(list);
-};
-
-const renderOfficerCard = function(officer) {
-    return `<div class="col-md-3 cardOfficer">
-                <img src="${officerFolderPath}${officer.image}" alt="${officer.name}">
-                <div class="overlayOfficer">
-                    <div class="textOfficer">
-                        ${officer.name}<br> ${officer.position}
-                    </div>
-                    <div class="OffBtn">
-                        <a href="${officer.linkedIn}" target="_blank" class="btn btn-primary" role="button" aria-pressed="true">LinkedIn</a>
-                    </div>
-                </div>
-            </div>`;
-};
-
-const renderOfficerCards = function() {
-    let officerRender = "";
-    for (let i = 0; i < officers.length; i++) {
-        officerRender += renderOfficerCard(officers[i]);
-        console.log(officerRender);
-    }
-    $("#officerContent").append(officerRender);
-};
-
-$(function () {
-    // Render the top partners divs
-    renderPartner(topPartnersData, "#topPartners", "topPartnerDiv");
-    // Render the developer event sponsors divs
-    renderPartner(developerEventPartnersData, "#developerEventPartners", "partnerDivEvent");
-    // Render the developer partners
-    renderPartner(developerPartnersData, "#developerPartners", "partnerDivDonate");
-    //
-    renderOfficerCards();
-});
-
-const officerFolderPath = "assets/Officers/";
-const officers = [
-    {
-        name: "Reece Kemball-Cook",
-        position: "President",
-        image: "ReeceKC/1.webp",
-        linkedIn: "https://www.linkedin.com/in/reece-kemball-cook-54557b150/"
-    },
-    {
-        name: "Alexandra Barnett",
-        position: "Vice President",
-        image: "AliB/1.webp",
-        linkedIn: "https://www.linkedin.com/in/alexandra-barnett-24930a163/"
-    },
-    {
-        name: "Sean Blonien",
-        position: "Director of Development",
-        image: "SeanB/1.webp",
-        linkedIn: "https://www.linkedin.com/in/seanblonien/"
-    },
-    {
-        name: "Cameron Hay",
-        position: "eSports Captain",
-        image: "CameronH/1.webp",
-        linkedIn: ""
-    },
-    {
-        name: "Josh Holland",
-        position: "Treasurer",
-        image: "JoshH/1.webp",
-        linkedIn: "https://www.linkedin.com/in/joshholland1/"
-    },
-    {
-        name: "Brittany LaVergne",
-        position: "Social Media Chair",
-        image: "placeholder_officer.jpg",
-        linkedIn: "https://www.linkedin.com/in/brittany-lavergne/"
-    },
-];
-
-// Mailchimp Javascript
-(function () {
-    window.fnames = [];
-    window.ftypes = [];
-    fnames[0] = 'EMAIL';
-    ftypes[0] = 'email';
-    fnames[1] = 'FNAME';
-    ftypes[1] = 'text';
-    fnames[2] = 'LNAME';
-    ftypes[2] = 'text';
-    fnames[3] = 'ADDRESS';
-    ftypes[3] = 'address';
-    fnames[4] = 'PHONE';
-    ftypes[4] = 'phone';
-}(jQuery));
-const $mcj = jQuery.noConflict(true);
